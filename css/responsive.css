@@ -1,0 +1,293 @@
+
+
+.mobile-menu-button {
+    display: none;
+}
+
+@media (max-width: 850px) {
+
+    .navbar {
+        overflow: visible;
+    }
+
+
+    .nav-container {
+        position: relative;
+
+        width: 100%;
+
+        padding:
+            0 20px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+    }
+
+    .brand {
+        position: relative;
+
+        z-index: 10002;
+    }
+
+
+    .brand img {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .brand span {
+        font-size: 16px;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+
+        width: 46px;
+        height: 42px;
+
+        padding: 0;
+
+        position: relative;
+
+        z-index: 10002;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 6px;
+
+        background:
+            linear-gradient(
+                145deg,
+                #171717,
+                #090909
+            );
+
+        border:
+            1px solid rgba(
+                255,
+                255,
+                255,
+                0.10
+            );
+
+        border-radius: 3px;
+
+        cursor: pointer;
+
+        box-shadow:
+            5px 5px 0 #020202,
+            0 10px 25px rgba(
+                0,
+                0,
+                0,
+                0.35
+            );
+    }
+
+    .mobile-menu-button span {
+        display: block;
+
+        width: 21px;
+        height: 2px;
+
+        background: #ffffff;
+
+        transition:
+            transform 0.25s ease,
+            opacity 0.25s ease,
+            background 0.25s ease;
+    }
+
+
+    .mobile-menu-button:hover span {
+        background: #e50914;
+    }
+
+    .mobile-menu-button.active span:nth-child(1) {
+        transform:
+            translateY(8px)
+            rotate(45deg);
+    }
+
+    .mobile-menu-button.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-button.active span:nth-child(3) {
+        transform:
+            translateY(-8px)
+            rotate(-45deg);
+    }
+
+    .nav-links {
+        display: flex;
+
+        position: absolute;
+
+        top: calc(100% + 12px);
+
+        left: 20px;
+        right: 20px;
+
+        padding: 14px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 6px;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(20, 20, 20, 0.98),
+                rgba(5, 5, 5, 0.98)
+            );
+
+        border:
+            1px solid rgba(
+                255,
+                255,
+                255,
+                0.10
+            );
+
+        border-top:
+            2px solid #e50914;
+
+        border-radius: 3px;
+
+        box-shadow:
+            12px 14px 0 rgba(
+                0,
+                0,
+                0,
+                0.75
+            ),
+            0 30px 60px rgba(
+                0,
+                0,
+                0,
+                0.65
+            );
+
+        backdrop-filter: blur(18px);
+
+        -webkit-backdrop-filter: blur(18px);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform:
+            translateY(-12px);
+
+        transition:
+            opacity 0.22s ease,
+            transform 0.22s ease,
+            visibility 0.22s ease;
+
+        z-index: 10001;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform:
+            translateY(0);
+    }
+
+    .nav-links a {
+        width: 100%;
+
+        padding:
+            14px 16px;
+
+        display: block;
+
+        color: #d5d5d5;
+
+        font-size: 13px;
+
+        font-weight: 700;
+
+        text-align: left;
+
+        text-decoration: none;
+
+        border:
+            1px solid transparent;
+
+        border-radius: 2px;
+
+        transition:
+            background 0.18s ease,
+            border-color 0.18s ease,
+            color 0.18s ease,
+            transform 0.18s ease;
+    }
+
+    .nav-links a:hover {
+        color: #ffffff;
+
+        background:
+            rgba(
+                229,
+                9,
+                20,
+                0.10
+            );
+
+        border-color:
+            rgba(
+                229,
+                9,
+                20,
+                0.28
+            );
+
+        transform:
+            translateX(3px);
+    }
+
+    .nav-links a[href="/admin/"] {
+        color: #ffffff;
+
+        border-color:
+            rgba(
+                229,
+                9,
+                20,
+                0.30
+            );
+
+        background:
+            rgba(
+                229,
+                9,
+                20,
+                0.08
+            );
+    }
+
+    .nav-links .nav-github {
+        margin-top: 5px;
+
+        text-align: center;
+    }
+
+}

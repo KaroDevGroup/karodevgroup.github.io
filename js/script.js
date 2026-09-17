@@ -73,3 +73,98 @@ const observer = new IntersectionObserver(
 revealElements.forEach(element => {
     observer.observe(element);
 });
+
+const mobileMenuButton =
+    document.getElementById(
+        "mobileMenuButton"
+    );
+
+const navLinks =
+    document.getElementById(
+        "navLinks"
+    );
+
+if (
+    mobileMenuButton &&
+    navLinks
+) {
+
+    mobileMenuButton.addEventListener(
+        "click",
+        () => {
+
+            const isOpen =
+                navLinks.classList.toggle(
+                    "active"
+                );
+
+
+            mobileMenuButton.classList.toggle(
+                "active",
+                isOpen
+            );
+
+
+            mobileMenuButton.setAttribute(
+                "aria-expanded",
+                isOpen
+                    ? "true"
+                    : "false"
+            );
+
+        }
+    );
+
+    navLinks
+        .querySelectorAll("a")
+        .forEach(link => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    navLinks.classList.remove(
+                        "active"
+                    );
+
+                    mobileMenuButton.classList.remove(
+                        "active"
+                    );
+
+                    mobileMenuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+    window.addEventListener(
+        "resize",
+        () => {
+
+            if (
+                window.innerWidth > 850
+            ) {
+
+                navLinks.classList.remove(
+                    "active"
+                );
+
+                mobileMenuButton.classList.remove(
+                    "active"
+                );
+
+                mobileMenuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+    );
+
+}

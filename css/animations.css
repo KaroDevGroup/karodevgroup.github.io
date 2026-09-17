@@ -1,6 +1,4 @@
-/* =========================================================
-   CINEMATIC STACKED SCROLL
-   ========================================================= */
+
 
 .stack-section {
     position: sticky;
@@ -35,9 +33,6 @@
         0 -1px 0 rgba(255, 255, 255, 0.04);
 }
 
-
-/* Give each section a slight separation */
-
 .stack-section::after {
     content: "";
 
@@ -60,17 +55,11 @@
     pointer-events: none;
 }
 
-
-/* Keeps section content above background effects */
-
 .stack-section > * {
     position: relative;
 
     z-index: 2;
 }
-
-
-/* Slight red glow near the top of each incoming page */
 
 .stack-section::before {
     content: "";
@@ -99,10 +88,6 @@
     pointer-events: none;
 }
 
-/* =========================================================
-   CONTENT REVEAL
-   ========================================================= */
-
 .reveal {
     opacity: 0;
 
@@ -127,10 +112,6 @@
         translateY(0)
         scale(1);
 }
-
-/* =========================================================
-   AMBIENT RED BACKGROUND EFFECTS
-   ========================================================= */
 
 body::after {
     content: "";
@@ -168,11 +149,6 @@ body::after {
             transparent 25%
         );
 }
-
-
-/* =========================================================
-   SIDE LIGHT BEAMS
-   ========================================================= */
 
 .side-light {
     position: fixed;
@@ -212,11 +188,6 @@ body::after {
     right: 5%;
 }
 
-
-/* =========================================================
-   LARGE SIDE GLOWS
-   ========================================================= */
-
 .side-glow {
     position: fixed;
 
@@ -255,11 +226,6 @@ body::after {
     animation-delay: -4s;
 }
 
-
-/* =========================================================
-   FLOATING RED PARTICLES
-   ========================================================= */
-
 .ambient-particles {
     position: fixed;
 
@@ -289,9 +255,6 @@ body::after {
     animation:
         floatParticle 12s linear infinite;
 }
-
-
-/* Particle positions */
 
 .ambient-particles span:nth-child(1) {
     left: 4%;
@@ -349,11 +312,6 @@ body::after {
     animation-delay: 7s;
 }
 
-
-/* =========================================================
-   ANIMATIONS
-   ========================================================= */
-
 @keyframes sideBeamPulse {
 
     0%,
@@ -365,7 +323,6 @@ body::after {
         opacity: 0.6;
     }
 }
-
 
 @keyframes floatGlow {
 
@@ -382,7 +339,6 @@ body::after {
             scale(1.08);
     }
 }
-
 
 @keyframes floatParticle {
 
@@ -410,10 +366,6 @@ body::after {
         opacity: 0;
     }
 }
-
-/* =========================================================
-   FULL WEBSITE BACKGROUND
-   ========================================================= */
 
 .site-background {
     position: fixed;
@@ -445,11 +397,6 @@ footer {
     z-index: 2;
 }
 
-
-/* =========================================================
-   MOVING RED ENERGY CLOUDS
-   ========================================================= */
-
 .bg-red-cloud {
     position: absolute;
 
@@ -461,9 +408,6 @@ footer {
 
     will-change: transform;
 }
-
-
-/* Top-left energy */
 
 .bg-red-cloud-1 {
     width: 800px;
@@ -484,9 +428,6 @@ footer {
         backgroundCloudOne 18s ease-in-out infinite alternate;
 }
 
-
-/* Right-side energy */
-
 .bg-red-cloud-2 {
     width: 900px;
     height: 900px;
@@ -506,9 +447,6 @@ footer {
         backgroundCloudTwo 22s ease-in-out infinite alternate;
 }
 
-
-/* Lower-left energy */
-
 .bg-red-cloud-3 {
     width: 700px;
     height: 700px;
@@ -527,11 +465,6 @@ footer {
     animation:
         backgroundCloudThree 20s ease-in-out infinite alternate;
 }
-
-
-/* =========================================================
-   TECH GRID
-   ========================================================= */
 
 .bg-grid {
     position: absolute;
@@ -558,11 +491,6 @@ footer {
         gridMove 20s linear infinite;
 }
 
-
-/* =========================================================
-   FAINT RED GRID ACCENT
-   ========================================================= */
-
 .bg-grid::after {
     content: "";
 
@@ -585,11 +513,6 @@ footer {
         200px 200px;
 }
 
-
-/* =========================================================
-   SCANLINES
-   ========================================================= */
-
 .bg-scanlines {
     position: absolute;
 
@@ -608,11 +531,6 @@ footer {
     mix-blend-mode: soft-light;
 }
 
-
-/* =========================================================
-   VIGNETTE
-   ========================================================= */
-
 .bg-vignette {
     position: absolute;
 
@@ -626,11 +544,6 @@ footer {
             rgba(0, 0, 0, 0.72) 100%
         );
 }
-
-
-/* =========================================================
-   BACKGROUND MOTION
-   ========================================================= */
 
 @keyframes backgroundCloudOne {
 
@@ -647,7 +560,6 @@ footer {
     }
 }
 
-
 @keyframes backgroundCloudTwo {
 
     0% {
@@ -662,7 +574,6 @@ footer {
             scale(1.12);
     }
 }
-
 
 @keyframes backgroundCloudThree {
 
@@ -679,7 +590,6 @@ footer {
     }
 }
 
-
 @keyframes gridMove {
 
     from {
@@ -694,10 +604,6 @@ footer {
             50px 50px;
     }
 }
-
-/* =========================================================
-   FIXED NAVBAR
-   ========================================================= */
 
 .navbar {
     position: fixed;
@@ -717,20 +623,12 @@ footer {
     z-index: 999999 !important;
 }
 
-/* =========================================================
-   HERO BACKGROUND TRANSPARENCY
-   ========================================================= */
-
 .hero.stack-section {
     background: transparent;
 
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
 }
-
-/* =========================================================
-   HERO SECTION CLEAN EDGE
-   ========================================================= */
 
 .hero.stack-section::after {
     display: none;

@@ -1,0 +1,731 @@
+@import url(
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap'
+);
+
+:root {
+    --red: #e50914;
+    --red-light: #ff2834;
+
+    --white: #ffffff;
+    --gray: #999999;
+    --muted: #676767;
+
+    --border:
+        rgba(255, 255, 255, 0.08);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 50% -15%,
+            rgba(229, 9, 20, 0.15),
+            transparent 38%
+        ),
+        linear-gradient(
+            180deg,
+            #090909,
+            #020202
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.background-grid {
+    position: fixed;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        50px 50px;
+
+    opacity: 0.55;
+
+    pointer-events: none;
+
+    z-index: -3;
+}
+
+
+.red-glow {
+    position: fixed;
+
+    width: 700px;
+    height: 700px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(229, 9, 20, 0.13),
+            transparent 70%
+        );
+
+    filter:
+        blur(80px);
+
+    pointer-events: none;
+
+    z-index: -2;
+}
+
+
+.glow-left {
+    left: -400px;
+    top: 15%;
+}
+
+
+.glow-right {
+    right: -400px;
+    bottom: 5%;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.page-navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 78px;
+
+    padding:
+        0 5%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        rgba(7, 7, 7, 0.95);
+
+    backdrop-filter:
+        blur(18px);
+
+    border-bottom:
+        1px solid var(--border);
+
+    box-shadow:
+        0 8px 30px
+        rgba(0, 0, 0, 0.65);
+
+    z-index: 1000;
+}
+
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 2px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    font-size: 19px;
+}
+
+
+.brand > span {
+    color: var(--red);
+}
+
+
+.brand small {
+    margin-left: 12px;
+
+    color: #666;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+.navbar-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+.admin-identity {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 3px;
+}
+
+
+.admin-identity strong {
+    font-size: 12px;
+}
+
+
+.admin-identity span {
+    color: var(--red);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.back-button,
+.decisions-button {
+    color: #c8c8c8;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.6px;
+
+    padding:
+        11px 16px;
+
+    border:
+        1px solid var(--border);
+
+    background:
+        linear-gradient(
+            180deg,
+            #171717,
+            #090909
+        );
+
+    box-shadow:
+        0 5px 0 #020202;
+
+    transition:
+        0.2s;
+}
+
+
+.back-button:hover,
+.decisions-button:hover {
+    color: white;
+
+    border-color:
+        rgba(229, 9, 20, 0.45);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.page-wrapper {
+    width:
+        min(1300px, 90%);
+
+    margin:
+        0 auto;
+
+    padding:
+        135px 0 80px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.page-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+}
+
+
+.eyebrow {
+    color: var(--red);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.page-header h1 {
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            60px
+        );
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+.subtitle {
+    margin-top: 12px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+.red-divider {
+    width: 85px;
+    height: 3px;
+
+    margin:
+        24px 0 40px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--red),
+            var(--red-light)
+        );
+
+    box-shadow:
+        0 0 14px
+        rgba(229, 9, 20, 0.35);
+}
+
+
+/* =========================================================
+   BAN CARD
+   ========================================================= */
+
+.ban-card {
+    display: flex;
+
+    justify-content: center;
+
+    padding:
+        20px 0 40px;
+}
+
+
+.ban-card-inner {
+    width: 100%;
+    max-width: 520px;
+
+    padding: 40px;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(229, 9, 20, 0.09),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #181818,
+            #090909
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        14px 16px 0 #020202,
+        22px 30px 50px rgba(0, 0, 0, 0.65),
+        inset 1px 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+
+.ban-card-inner::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #600006,
+            var(--red),
+            var(--red-light)
+        );
+}
+
+
+/* =========================================================
+   CARD BRANDING
+   ========================================================= */
+
+.card-branding {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.card-branding h2 {
+    font-size: 28px;
+
+    font-weight: 900;
+}
+
+
+.card-branding span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--red);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.6px;
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+.form-heading {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.form-heading h3 {
+    font-size: 24px;
+
+    margin-bottom: 6px;
+}
+
+
+.form-heading p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #b0b0b0;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    color: white;
+
+    background:
+        #0c0c0c;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    box-shadow:
+        inset 0 4px 10px rgba(0, 0, 0, 0.55);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.form-group input {
+    height: 45px;
+
+    padding:
+        0 14px;
+}
+
+
+.form-group textarea {
+    min-height: 110px;
+
+    padding:
+        13px 14px;
+
+    resize: vertical;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color:
+        rgba(229, 9, 20, 0.65);
+
+    box-shadow:
+        inset 0 4px 10px rgba(0, 0, 0, 0.55),
+        0 0 18px rgba(229, 9, 20, 0.10);
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.ban-button {
+    width: 100%;
+
+    height: 45px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ff202c,
+            #d70711
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 0 #700007,
+        0 14px 25px rgba(229, 9, 20, 0.20);
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+.ban-button:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 9px 0 #700007,
+        0 18px 30px rgba(229, 9, 20, 0.28);
+}
+
+
+.ban-button:active {
+    transform:
+        translateY(4px);
+
+    box-shadow:
+        0 2px 0 #700007;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status-text {
+    min-height: 18px;
+
+    margin-top: 15px;
+
+    color: var(--red-light);
+
+    text-align: center;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+.authorized-text {
+    margin-top: 25px;
+
+    color: #666;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    margin-top: 50px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid var(--border);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #666;
+
+    font-size: 10px;
+}
+
+
+footer strong {
+    color: #777;
+
+    font-size: 11px;
+
+    letter-spacing: 0.6px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .page-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .decisions-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .admin-identity {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .page-wrapper {
+        width: 88%;
+    }
+
+
+    .brand small {
+        display: none;
+    }
+
+
+    .ban-card-inner {
+        padding: 30px 22px;
+    }
+
+}

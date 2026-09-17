@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DaBoyzApp | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <div class="red-glow glow-left"></div>
+    <div class="red-glow glow-right"></div>
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <nav class="dashboard-navbar">
+
+        <div class="brand">
+            <span>DA</span>BOYZAPP
+            <small>ADMIN</small>
+        </div>
+
+
+        <div class="navbar-right">
+
+            <div class="admin-identity">
+
+                <strong id="adminName">
+                    Loading...
+                </strong>
+
+                <span id="adminRole">
+                    ADMIN
+                </span>
+
+            </div>
+
+
+            <button
+                id="logoutButton"
+                class="logout-button"
+            >
+                LOG OUT
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         MAIN DASHBOARD
+         ===================================================== -->
+
+    <main class="dashboard-wrapper">
+
+
+        <!-- =================================================
+             WELCOME
+             ================================================= -->
+
+        <section class="welcome-section">
+
+            <p class="small-heading">
+                ADMIN DASHBOARD
+            </p>
+
+            <h1>
+                Welcome back,
+                <span id="welcomeName">
+                    Admin
+                </span>.
+            </h1>
+
+            <p>
+                Da Boyz staff resources and administration.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             STAFF RESOURCES TITLE
+             ================================================= -->
+
+        <div class="dashboard-section-title">
+            STAFF RESOURCES
+        </div>
+
+
+        <!-- =================================================
+             DASHBOARD CARDS
+             ================================================= -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- =============================================
+                 PUNISHMENT SLATE
+                 ============================================= -->
+
+            <a
+                href="punishment-slate.html"
+                class="dashboard-card"
+                id="punishmentSlateCard"
+            >
+
+                <div class="card-number">
+                    01
+                </div>
+
+                <div class="card-icon">
+                    ⚖
+                </div>
+
+                <h2>
+                    PUNISHMENT SLATE
+                </h2>
+
+                <p>
+                    View punishment guidelines,
+                    consequences, and moderation procedures.
+                </p>
+
+                <span class="card-link">
+                    VIEW SLATE →
+                </span>
+
+            </a>
+
+
+            <!-- =============================================
+                 RULES
+                 ============================================= -->
+
+            <a
+                href="rules.html"
+                class="dashboard-card"
+                id="rulesCard"
+            >
+
+                <div class="card-number">
+                    02
+                </div>
+
+                <div class="card-icon">
+                    ◆
+                </div>
+
+                <h2>
+                    RULES
+                </h2>
+
+                <p>
+                    View server rules,
+                    staff guidelines, and community standards.
+                </p>
+
+                <span class="card-link">
+                    VIEW RULES →
+                </span>
+
+            </a>
+
+
+            <!-- =============================================
+                 DISCORD COMMANDS
+                 ============================================= -->
+
+            <a
+                href="discord-commands.html"
+                class="dashboard-card"
+                id="discordCommandsCard"
+            >
+
+                <div class="card-number">
+                    03
+                </div>
+
+                <div class="card-icon">
+                    ⌘
+                </div>
+
+                <h2>
+                    DISCORD COMMANDS
+                </h2>
+
+                <p>
+                    View moderation,
+                    utility, and staff Discord commands.
+                </p>
+
+                <span class="card-link">
+                    VIEW COMMANDS →
+                </span>
+
+            </a>
+
+
+            <!-- =============================================
+                 STAFF MEMBERS
+                 ============================================= -->
+
+            <a
+                href="staff-members.html"
+                class="dashboard-card"
+                id="staffMembersCard"
+            >
+
+                <div class="card-number">
+                    04
+                </div>
+
+                <div class="card-icon">
+                    ♟
+                </div>
+
+                <h2>
+                    STAFF MEMBERS
+                </h2>
+
+                <p>
+                    View the current Da Boyz staff team
+                    and their positions.
+                </p>
+
+                <span class="card-link">
+                    VIEW STAFF →
+                </span>
+
+            </a>
+
+
+            <!-- =============================================
+                 DECISIONS
+                 ============================================= -->
+
+            <a
+                href="decisions.html"
+                class="dashboard-card decisions-card"
+                id="decisionsCard"
+            >
+
+                <div class="card-number">
+                    05
+                </div>
+
+                <div class="card-icon">
+                    ⚠
+                </div>
+
+                <h2>
+                    DECISIONS
+                </h2>
+
+                <p>
+                    Issue Moderation Commands.
+                </p>
+
+                <span class="card-link">
+                    OPEN DECISIONS →
+                </span>
+
+            </a>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DaBoyzApp | Lock Channel</title>
+
+    <link
+        rel="stylesheet"
+        href="lock-channel.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <div class="red-glow glow-left"></div>
+    <div class="red-glow glow-right"></div>
+
+
+    <nav class="page-navbar">
+
+        <div class="brand">
+            <span>DA</span>BOYZAPP
+            <small>ADMIN</small>
+        </div>
+
+
+        <div class="navbar-right">
+
+            <div class="admin-identity">
+
+                <strong id="adminName">
+                    Loading...
+                </strong>
+
+                <span id="adminRole">
+                    ADMIN
+                </span>
+
+            </div>
+
+
+            <a
+                href="decisions.html"
+                class="back-button"
+            >
+                ← DECISIONS
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="page-wrapper">
+
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    MODERATION ACTION
+                </p>
+
+                <h1>
+                    LOCK CHANNEL
+                </h1>
+
+                <p class="subtitle">
+                    Prevent members from sending messages
+                    in a Discord channel.
+                </p>
+
+            </div>
+
+
+            <a
+                href="decisions.html"
+                class="decisions-button"
+            >
+                BACK TO DECISIONS
+            </a>
+
+        </section>
+
+
+        <div class="red-divider"></div>
+
+
+        <section class="lock-card">
+
+            <div class="lock-card-inner">
+
+
+                <div class="card-branding">
+
+                    <h2>
+                        DA BOYZ
+                    </h2>
+
+                    <span>
+                        MODERATION
+                    </span>
+
+                </div>
+
+
+                <div class="form-heading">
+
+                    <h3>
+                        Lock a channel.
+                    </h3>
+
+                    <p>
+                        Enter the Discord channel ID to
+                        prevent members from sending messages.
+                    </p>
+
+                </div>
+
+
+                <form id="lockForm">
+
+
+                    <div class="form-group">
+
+                        <label for="channelId">
+                            DISCORD CHANNEL ID
+                        </label>
+
+                        <input
+                            id="channelId"
+                            type="text"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="lockButton"
+                        class="lock-button"
+                    >
+                        LOCK CHANNEL
+                    </button>
+
+
+                    <p
+                        id="statusText"
+                        class="status-text"
+                    ></p>
+
+
+                </form>
+
+
+                <div class="authorized-text">
+                    AUTHORIZED SENIOR STAFF ONLY
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <strong>
+                DA BOYZ • LOCK CHANNEL
+            </strong>
+
+            <span>
+                Created by: KaroDevGroup
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="lock-channel.js"></script>
+
+</body>
+
+</html>

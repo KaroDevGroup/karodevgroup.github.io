@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DaBoyzApp | Clear Messages</title>
+
+    <link
+        rel="stylesheet"
+        href="clear-messages.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <div class="red-glow glow-left"></div>
+    <div class="red-glow glow-right"></div>
+
+
+    <nav class="page-navbar">
+
+        <div class="brand">
+            <span>DA</span>BOYZAPP
+            <small>ADMIN</small>
+        </div>
+
+
+        <div class="navbar-right">
+
+            <div class="admin-identity">
+
+                <strong id="adminName">
+                    Loading...
+                </strong>
+
+                <span id="adminRole">
+                    ADMIN
+                </span>
+
+            </div>
+
+
+            <a
+                href="decisions.html"
+                class="back-button"
+            >
+                ← DECISIONS
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="page-wrapper">
+
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    MODERATION ACTION
+                </p>
+
+                <h1>
+                    CLEAR MESSAGES
+                </h1>
+
+                <p class="subtitle">
+                    Delete messages from a Discord channel
+                    through DaBoyzApp.
+                </p>
+
+            </div>
+
+
+            <a
+                href="decisions.html"
+                class="decisions-button"
+            >
+                BACK TO DECISIONS
+            </a>
+
+        </section>
+
+
+        <div class="red-divider"></div>
+
+
+        <section class="clear-card">
+
+            <div class="clear-card-inner">
+
+
+                <div class="card-branding">
+
+                    <h2>
+                        DA BOYZ
+                    </h2>
+
+                    <span>
+                        MODERATION
+                    </span>
+
+                </div>
+
+
+                <div class="form-heading">
+
+                    <h3>
+                        Clear channel messages.
+                    </h3>
+
+                    <p>
+                        Enter the channel ID and number
+                        of messages to delete.
+                    </p>
+
+                </div>
+
+
+                <form id="clearForm">
+
+
+                    <div class="form-group">
+
+                        <label for="channelId">
+                            DISCORD CHANNEL ID
+                        </label>
+
+                        <input
+                            id="channelId"
+                            type="text"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="amount">
+                            MESSAGE AMOUNT
+                        </label>
+
+                        <input
+                            id="amount"
+                            type="number"
+                            min="1"
+                            max="100"
+                            autocomplete="off"
+                        >
+
+                        <p class="field-help">
+                            Minimum: 1 • Maximum: 100
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="clearButton"
+                        class="clear-button"
+                    >
+                        CLEAR MESSAGES
+                    </button>
+
+
+                    <p
+                        id="statusText"
+                        class="status-text"
+                    ></p>
+
+
+                </form>
+
+
+                <div class="authorized-text">
+                    AUTHORIZED STAFF ONLY
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <strong>
+                DA BOYZ • CLEAR MESSAGES
+            </strong>
+
+            <span>
+                Created by: KaroDevGroup
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="clear-messages.js"></script>
+
+</body>
+
+</html>

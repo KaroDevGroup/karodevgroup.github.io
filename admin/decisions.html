@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DaBoyzApp | Decisions</title>
+
+    <link
+        rel="stylesheet"
+        href="decisions.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <div class="red-glow glow-left"></div>
+    <div class="red-glow glow-right"></div>
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <nav class="page-navbar">
+
+        <div class="brand">
+            <span>DA</span>BOYZAPP
+            <small>ADMIN</small>
+        </div>
+
+
+        <div class="navbar-right">
+
+            <div class="admin-identity">
+
+                <strong id="adminName">
+                    Loading...
+                </strong>
+
+                <span id="adminRole">
+                    ADMIN
+                </span>
+
+            </div>
+
+
+            <a
+                href="dashboard.html"
+                class="back-button"
+            >
+                ← DASHBOARD
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         PAGE
+         ===================================================== -->
+
+    <main class="page-wrapper">
+
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    MODERATION CONTROL
+                </p>
+
+                <h1>
+                    DECISIONS
+                </h1>
+
+                <p class="subtitle">
+                    Issue moderation actions through the
+                    Da Boyz Discord bot.
+                </p>
+
+            </div>
+
+
+            <a
+                href="dashboard.html"
+                class="dashboard-button"
+            >
+                BACK TO ADMIN DASHBOARD
+            </a>
+
+        </section>
+
+
+        <div class="red-divider"></div>
+
+
+        <!-- =================================================
+             MODERATION ACTIONS
+             ================================================= -->
+
+        <h2 class="section-title">
+            MODERATION ACTIONS
+        </h2>
+
+
+        <section class="actions-grid">
+
+
+            <!-- WARN -->
+
+            <a
+                href="warn-member.html"
+                class="action-card"
+                id="warnCard"
+            >
+
+                <div class="action-number">
+                    01
+                </div>
+
+                <div class="action-icon">
+                    ⚠
+                </div>
+
+                <h2>
+                    WARN MEMBER
+                </h2>
+
+                <p>
+                    Issue a warning to a Discord member.
+                </p>
+
+                <span class="action-link">
+                    OPEN →
+                </span>
+
+            </a>
+
+
+            <!-- TIMEOUT -->
+
+            <a
+                href="timeout-member.html"
+                class="action-card"
+                id="timeoutCard"
+            >
+
+                <div class="action-number">
+                    02
+                </div>
+
+                <div class="action-icon">
+                    ◷
+                </div>
+
+                <h2>
+                    TIMEOUT MEMBER
+                </h2>
+
+                <p>
+                    Temporarily restrict a Discord member.
+                </p>
+
+                <span class="action-link">
+                    OPEN →
+                </span>
+
+            </a>
+
+
+            <!-- KICK -->
+
+            <a
+                href="kick-member.html"
+                class="action-card"
+                id="kickCard"
+            >
+
+                <div class="action-number">
+                    03
+                </div>
+
+                <div class="action-icon">
+                    ⇥
+                </div>
+
+                <h2>
+                    KICK MEMBER
+                </h2>
+
+                <p>
+                    Remove a member from the Discord server.
+                </p>
+
+                <span class="action-link">
+                    OPEN →
+                </span>
+
+            </a>
+
+
+            <!-- BAN -->
+
+            <a
+                href="ban-member.html"
+                class="action-card"
+                id="banCard"
+            >
+
+                <div class="action-number">
+                    04
+                </div>
+
+                <div class="action-icon">
+                    ⊘
+                </div>
+
+                <h2>
+                    BAN MEMBER
+                </h2>
+
+                <p>
+                    Ban a member from the Discord server.
+                </p>
+
+                <span class="action-link">
+                    OPEN →
+                </span>
+
+            </a>
+
+
+            <!-- UNBAN -->
+
+            <a
+                href="unban-member.html"
+                class="action-card"
+                id="unbanCard"
+            >
+
+                <div class="action-number">
+                    05
+                </div>
+
+                <div class="action-icon">
+                    ↺
+                </div>
+
+                <h2>
+                    UNBAN MEMBER
+                </h2>
+
+                <p>
+                    Remove a ban from a Discord user.
+                </p>
+
+                <span class="action-link">
+                    OPEN →
+                </span>
+
+            </a>
+
+
+            <!-- CLEAR -->
+
+            <a
+                href="clear-messages.html"
+                class="action-card"
+                id="clearCard"
+            >
+
+                <div class="action-number">
+                    06
+                </div>
+
+                <div class="action-icon">
+                    ⌫
+                </div>
+
+                <h2>
+                    CLEAR MESSAGES
+                </h2>
+
+                <p>
+                    Remove messages from a Discord channel.
+                </p>
+
+                <span class="action-link">
+                    OPEN →
+                </span>
+
+            </a>
+
+
+            <!-- LOCK -->
+
+            <a
+                href="lock-channel.html"
+                class="action-card"
+                id="lockCard"
+            >
+
+                <div class="action-number">
+                    07
+                </div>
+
+                <div class="action-icon">
+                    🔒
+                </div>
+
+                <h2>
+                    LOCK CHANNEL
+                </h2>
+
+                <p>
+                    Prevent members from sending messages
+                    in a channel.
+                </p>
+
+                <span class="action-link">
+                    OPEN →
+                </span>
+
+            </a>
+
+
+            <!-- UNLOCK -->
+
+            <a
+                href="unlock-channel.html"
+                class="action-card"
+                id="unlockCard"
+            >
+
+                <div class="action-number">
+                    08
+                </div>
+
+                <div class="action-icon">
+                    🔓
+                </div>
+
+                <h2>
+                    UNLOCK CHANNEL
+                </h2>
+
+                <p>
+                    Restore messaging access
+                    in a Discord channel.
+                </p>
+
+                <span class="action-link">
+                    OPEN →
+                </span>
+
+            </a>
+
+
+        </section>
+
+
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
+
+        <footer>
+
+            <strong>
+                DA BOYZ • ADMIN DECISIONS
+            </strong>
+
+            <span>
+                Created by: KaroDevGroup
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="decisions.js"></script>
+
+</body>
+
+</html>

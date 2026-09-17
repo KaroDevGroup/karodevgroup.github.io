@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DaBoyzApp | Warn Member</title>
+
+    <link
+        rel="stylesheet"
+        href="warn-member.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <div class="red-glow glow-left"></div>
+    <div class="red-glow glow-right"></div>
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <nav class="page-navbar">
+
+        <div class="brand">
+            <span>DA</span>BOYZAPP
+            <small>ADMIN</small>
+        </div>
+
+
+        <div class="navbar-right">
+
+            <div class="admin-identity">
+
+                <strong id="adminName">
+                    Loading...
+                </strong>
+
+                <span id="adminRole">
+                    ADMIN
+                </span>
+
+            </div>
+
+
+            <a
+                href="decisions.html"
+                class="back-button"
+            >
+                ← DECISIONS
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         PAGE
+         ===================================================== -->
+
+    <main class="page-wrapper">
+
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    MODERATION ACTION
+                </p>
+
+                <h1>
+                    WARN MEMBER
+                </h1>
+
+                <p class="subtitle">
+                    Issue a Discord warning through DaBoyzApp.
+                </p>
+
+            </div>
+
+
+            <a
+                href="decisions.html"
+                class="decisions-button"
+            >
+                BACK TO DECISIONS
+            </a>
+
+        </section>
+
+
+        <div class="red-divider"></div>
+
+
+        <!-- =================================================
+             WARN CARD
+             ================================================= -->
+
+        <section class="warn-card">
+
+            <div class="warn-card-inner">
+
+
+                <!-- BRANDING -->
+
+                <div class="card-branding">
+
+                    <h2>
+                        DA BOYZ
+                    </h2>
+
+                    <span>
+                        MODERATION
+                    </span>
+
+                </div>
+
+
+                <!-- TITLE -->
+
+                <div class="form-heading">
+
+                    <h3>
+                        Issue a warning.
+                    </h3>
+
+                    <p>
+                        Enter the Discord member ID
+                        and reason for the warning.
+                    </p>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <form id="warnForm">
+
+
+                    <!-- MEMBER ID -->
+
+                    <div class="form-group">
+
+                        <label for="memberId">
+                            MEMBER DISCORD ID
+                        </label>
+
+                        <input
+                            id="memberId"
+                            type="text"
+                            placeholder="Enter Discord user ID"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <!-- REASON -->
+
+                    <div class="form-group">
+
+                        <label for="reason">
+                            REASON
+                        </label>
+
+                        <textarea
+                            id="reason"
+                            placeholder="Enter reason for warning..."
+                            rows="6"
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        id="warnButton"
+                        class="warn-button"
+                    >
+                        ISSUE WARNING
+                    </button>
+
+
+                    <!-- STATUS -->
+
+                    <p
+                        id="statusText"
+                        class="status-text"
+                    ></p>
+
+
+                </form>
+
+
+                <div class="authorized-text">
+                    AUTHORIZED STAFF ONLY
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
+
+        <footer>
+
+            <strong>
+                DA BOYZ • WARN MEMBER
+            </strong>
+
+            <span>
+                Created by: KaroDevGroup
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="warn-member.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DaBoyzApp | Unban Member</title>
+
+    <link
+        rel="stylesheet"
+        href="unban-member.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <div class="red-glow glow-left"></div>
+    <div class="red-glow glow-right"></div>
+
+
+    <nav class="page-navbar">
+
+        <div class="brand">
+            <span>DA</span>BOYZAPP
+            <small>ADMIN</small>
+        </div>
+
+
+        <div class="navbar-right">
+
+            <div class="admin-identity">
+
+                <strong id="adminName">
+                    Loading...
+                </strong>
+
+                <span id="adminRole">
+                    ADMIN
+                </span>
+
+            </div>
+
+
+            <a
+                href="decisions.html"
+                class="back-button"
+            >
+                ← DECISIONS
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="page-wrapper">
+
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    MODERATION ACTION
+                </p>
+
+                <h1>
+                    UNBAN MEMBER
+                </h1>
+
+                <p class="subtitle">
+                    Remove a Discord user's ban
+                    through DaBoyzApp.
+                </p>
+
+            </div>
+
+
+            <a
+                href="decisions.html"
+                class="decisions-button"
+            >
+                BACK TO DECISIONS
+            </a>
+
+        </section>
+
+
+        <div class="red-divider"></div>
+
+
+        <section class="unban-card">
+
+            <div class="unban-card-inner">
+
+
+                <div class="card-branding">
+
+                    <h2>
+                        DA BOYZ
+                    </h2>
+
+                    <span>
+                        MODERATION
+                    </span>
+
+                </div>
+
+
+                <div class="form-heading">
+
+                    <h3>
+                        Unban a member.
+                    </h3>
+
+                    <p>
+                        Enter the Discord user ID and reason.
+                    </p>
+
+                </div>
+
+
+                <form id="unbanForm">
+
+
+                    <div class="form-group">
+
+                        <label for="userId">
+                            DISCORD USER ID
+                        </label>
+
+                        <input
+                            id="userId"
+                            type="text"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="reason">
+                            REASON
+                        </label>
+
+                        <textarea
+                            id="reason"
+                            rows="6"
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="unbanButton"
+                        class="unban-button"
+                    >
+                        UNBAN MEMBER
+                    </button>
+
+
+                    <p
+                        id="statusText"
+                        class="status-text"
+                    ></p>
+
+
+                </form>
+
+
+                <div class="authorized-text">
+                    AUTHORIZED STAFF ONLY
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <strong>
+                DA BOYZ • UNBAN MEMBER
+            </strong>
+
+            <span>
+                Created by: KaroDevGroup
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="unban-member.js"></script>
+
+</body>
+
+</html>

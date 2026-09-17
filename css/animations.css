@@ -1,0 +1,741 @@
+/* =========================================================
+   CINEMATIC STACKED SCROLL
+   ========================================================= */
+
+.stack-section {
+    position: sticky;
+    top: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transform-origin: center top;
+
+    transition:
+        transform 0.15s linear,
+        filter 0.15s linear,
+        opacity 0.15s linear;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(229, 9, 20, 0.07),
+            transparent 38%
+        ),
+        rgba(5, 5, 5, 0.78);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    box-shadow:
+        0 -20px 60px rgba(0, 0, 0, 0.8),
+        0 -1px 0 rgba(255, 255, 255, 0.04);
+}
+
+
+/* Give each section a slight separation */
+
+.stack-section::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(229, 9, 20, 0.35),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* Keeps section content above background effects */
+
+.stack-section > * {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Slight red glow near the top of each incoming page */
+
+.stack-section::before {
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+    left: 50%;
+
+    width: 70%;
+    height: 220px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(229, 9, 20, 0.14),
+            transparent 70%
+        );
+
+    filter: blur(35px);
+
+    opacity: 0.8;
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   CONTENT REVEAL
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(50px)
+        scale(0.97);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+/* =========================================================
+   AMBIENT RED BACKGROUND EFFECTS
+   ========================================================= */
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 0% 30%,
+            rgba(229, 9, 20, 0.16),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 100% 65%,
+            rgba(229, 9, 20, 0.14),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 10% 85%,
+            rgba(120, 0, 8, 0.10),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(120, 0, 8, 0.10),
+            transparent 25%
+        );
+}
+
+
+/* =========================================================
+   SIDE LIGHT BEAMS
+   ========================================================= */
+
+.side-light {
+    position: fixed;
+
+    top: 0;
+
+    width: 2px;
+    height: 100vh;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(229, 9, 20, 0.5),
+            transparent
+        );
+
+    box-shadow:
+        0 0 18px rgba(229, 9, 20, 0.35),
+        0 0 40px rgba(229, 9, 20, 0.14);
+
+    opacity: 0.45;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation:
+        sideBeamPulse 5s ease-in-out infinite;
+}
+
+.side-light.left {
+    left: 5%;
+}
+
+.side-light.right {
+    right: 5%;
+}
+
+
+/* =========================================================
+   LARGE SIDE GLOWS
+   ========================================================= */
+
+.side-glow {
+    position: fixed;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(229, 9, 20, 0.13),
+            rgba(229, 9, 20, 0.03) 45%,
+            transparent 72%
+        );
+
+    filter: blur(30px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        floatGlow 10s ease-in-out infinite;
+}
+
+.side-glow.left {
+    left: -210px;
+    top: 20%;
+}
+
+.side-glow.right {
+    right: -210px;
+    top: 55%;
+
+    animation-delay: -4s;
+}
+
+
+/* =========================================================
+   FLOATING RED PARTICLES
+   ========================================================= */
+
+.ambient-particles {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.ambient-particles span {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    background: var(--red);
+
+    box-shadow:
+        0 0 8px rgba(229, 9, 20, 0.9),
+        0 0 18px rgba(229, 9, 20, 0.45);
+
+    opacity: 0;
+
+    animation:
+        floatParticle 12s linear infinite;
+}
+
+
+/* Particle positions */
+
+.ambient-particles span:nth-child(1) {
+    left: 4%;
+    top: 90%;
+
+    animation-delay: 0s;
+}
+
+.ambient-particles span:nth-child(2) {
+    left: 9%;
+    top: 70%;
+
+    animation-delay: 2s;
+}
+
+.ambient-particles span:nth-child(3) {
+    left: 14%;
+    top: 85%;
+
+    animation-delay: 4s;
+}
+
+.ambient-particles span:nth-child(4) {
+    right: 5%;
+    top: 88%;
+
+    animation-delay: 1s;
+}
+
+.ambient-particles span:nth-child(5) {
+    right: 10%;
+    top: 72%;
+
+    animation-delay: 3s;
+}
+
+.ambient-particles span:nth-child(6) {
+    right: 15%;
+    top: 92%;
+
+    animation-delay: 5s;
+}
+
+.ambient-particles span:nth-child(7) {
+    left: 7%;
+    top: 55%;
+
+    animation-delay: 6s;
+}
+
+.ambient-particles span:nth-child(8) {
+    right: 7%;
+    top: 50%;
+
+    animation-delay: 7s;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes sideBeamPulse {
+
+    0%,
+    100% {
+        opacity: 0.22;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+
+@keyframes floatGlow {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-60px)
+            scale(1.08);
+    }
+}
+
+
+@keyframes floatParticle {
+
+    0% {
+        transform:
+            translateY(50px)
+            scale(0.5);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.7;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform:
+            translateY(-750px)
+            scale(1.2);
+
+        opacity: 0;
+    }
+}
+
+/* =========================================================
+   FULL WEBSITE BACKGROUND
+   ========================================================= */
+
+.site-background {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            180deg,
+            #080808 0%,
+            #040404 45%,
+            #020202 100%
+        );
+}
+
+.hero,
+.section,
+footer {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   MOVING RED ENERGY CLOUDS
+   ========================================================= */
+
+.bg-red-cloud {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    opacity: 0.18;
+
+    will-change: transform;
+}
+
+
+/* Top-left energy */
+
+.bg-red-cloud-1 {
+    width: 800px;
+    height: 800px;
+
+    top: -350px;
+    left: -250px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 20, 30, 0.8) 0%,
+            rgba(150, 0, 10, 0.35) 40%,
+            transparent 72%
+        );
+
+    animation:
+        backgroundCloudOne 18s ease-in-out infinite alternate;
+}
+
+
+/* Right-side energy */
+
+.bg-red-cloud-2 {
+    width: 900px;
+    height: 900px;
+
+    top: 35%;
+    right: -450px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(229, 9, 20, 0.75) 0%,
+            rgba(100, 0, 5, 0.32) 42%,
+            transparent 72%
+        );
+
+    animation:
+        backgroundCloudTwo 22s ease-in-out infinite alternate;
+}
+
+
+/* Lower-left energy */
+
+.bg-red-cloud-3 {
+    width: 700px;
+    height: 700px;
+
+    bottom: -350px;
+    left: 10%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(180, 0, 10, 0.65) 0%,
+            rgba(100, 0, 5, 0.25) 42%,
+            transparent 72%
+        );
+
+    animation:
+        backgroundCloudThree 20s ease-in-out infinite alternate;
+}
+
+
+/* =========================================================
+   TECH GRID
+   ========================================================= */
+
+.bg-grid {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        50px 50px;
+
+    opacity: 0.65;
+
+    animation:
+        gridMove 20s linear infinite;
+}
+
+
+/* =========================================================
+   FAINT RED GRID ACCENT
+   ========================================================= */
+
+.bg-grid::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(229, 9, 20, 0.02) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(229, 9, 20, 0.02) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        200px 200px;
+}
+
+
+/* =========================================================
+   SCANLINES
+   ========================================================= */
+
+.bg-scanlines {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0px,
+            transparent 3px,
+            rgba(255, 255, 255, 0.012) 4px
+        );
+
+    opacity: 0.25;
+
+    mix-blend-mode: soft-light;
+}
+
+
+/* =========================================================
+   VIGNETTE
+   ========================================================= */
+
+.bg-vignette {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            rgba(0, 0, 0, 0.22) 65%,
+            rgba(0, 0, 0, 0.72) 100%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND MOTION
+   ========================================================= */
+
+@keyframes backgroundCloudOne {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+
+    100% {
+        transform:
+            translate3d(180px, 120px, 0)
+            scale(1.15);
+    }
+}
+
+
+@keyframes backgroundCloudTwo {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+
+    100% {
+        transform:
+            translate3d(-180px, -100px, 0)
+            scale(1.12);
+    }
+}
+
+
+@keyframes backgroundCloudThree {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+
+    100% {
+        transform:
+            translate3d(120px, -120px, 0)
+            scale(1.18);
+    }
+}
+
+
+@keyframes gridMove {
+
+    from {
+        background-position:
+            0 0,
+            0 0;
+    }
+
+    to {
+        background-position:
+            50px 50px,
+            50px 50px;
+    }
+}
+
+/* =========================================================
+   FIXED NAVBAR
+   ========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+}
+
+.stack-section {
+    z-index: 10;
+}
+
+.navbar {
+    z-index: 999999 !important;
+}
+
+/* =========================================================
+   HERO BACKGROUND TRANSPARENCY
+   ========================================================= */
+
+.hero.stack-section {
+    background: transparent;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+/* =========================================================
+   HERO SECTION CLEAN EDGE
+   ========================================================= */
+
+.hero.stack-section::after {
+    display: none;
+}
+
+.hero.stack-section {
+    box-shadow: none;
+}

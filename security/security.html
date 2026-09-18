@@ -1,0 +1,1022 @@
+<!-- KaroDevGroup -->
+<!-- Josh Karo -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="DaBoyzApp Security Center - verification, VirusTotal results, anti-cheat information, and source transparency."
+    >
+
+    <title>
+        Security Center | DaBoyzApp
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="security.css"
+    >
+
+</head>
+
+
+<body class="security-page">
+
+
+    <!-- =========================================================
+         SECURITY BACKGROUND
+         ========================================================= -->
+
+    <div class="security-background">
+
+        <div class="security-grid-bg"></div>
+
+        <div class="security-glow glow-a"></div>
+        <div class="security-glow glow-b"></div>
+        <div class="security-glow glow-c"></div>
+
+        <div class="security-vignette"></div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         NAVIGATION
+         ========================================================= -->
+
+    <nav class="navbar security-navbar">
+
+        <div class="nav-container">
+
+
+            <a
+                href="../index.html"
+                class="brand main-brand"
+            >
+
+                <img
+                    src="../assets/logo.png"
+                    alt="Da Boyz Logo"
+                >
+
+
+                <div class="brand-lockup">
+
+                    <div class="brand-name">
+
+                        <span class="brand-red">
+                            DA
+                        </span>
+
+                        <span class="brand-white">
+                            BOYZAPP
+                        </span>
+
+                    </div>
+
+
+                    <small class="security-subtitle">
+                        SECURITY CENTER
+                    </small>
+
+                </div>
+
+            </a>
+
+
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+
+            <div
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <a href="../index.html#home">
+                    Home
+                </a>
+
+                <a href="../features/features.html">
+                    Features
+                </a>
+
+                <a href="../download/download.html">
+                    Download
+                </a>
+
+                <a
+                    href="security.html"
+                    class="security-active"
+                >
+                    Security
+                </a>
+
+                <a href="../screenshots/screenshots.html">
+                    Screenshots
+                </a>
+
+                <a
+                    href="../admin/"
+                    class="nav-admin"
+                >
+                    Admin Portal
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+
+    <header class="security-hero">
+
+
+        <div class="security-hero-content">
+
+
+            <div class="security-status">
+
+                <span class="security-dot"></span>
+
+                SECURITY CENTER
+
+            </div>
+
+
+            <p class="security-eyebrow">
+                VERIFIED • TRANSPARENT • OPEN
+            </p>
+
+
+            <h1>
+
+                Verify the build.
+
+                <span>
+                    Feel the protection.
+                </span>
+
+            </h1>
+
+
+            <p class="security-description">
+
+                I've decided to provide published file hashes,
+                VirusTotal reports, built-in protection systems,
+                and public source code so releases can be
+                independently inspected.
+
+            </p>
+
+
+            <div class="security-hero-actions">
+
+                <a
+                    href="#securityCards"
+                    class="security-primary-button"
+                >
+
+                    EXPLORE SECURITY
+
+                    <span>
+                        ↓
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="https://github.com/KaroDevGroup/DaBoyzApp"
+                    target="_blank"
+                    class="security-secondary-button"
+                >
+
+                    VIEW SOURCE
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <div class="security-meta">
+
+                <div>
+
+                    <span>
+                        FILE VERIFICATION
+                    </span>
+
+                    <strong>
+                        SHA-256
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ANALYSIS
+                    </span>
+
+                    <strong>
+                        VirusTotal
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        TRANSPARENCY
+                    </span>
+
+                    <strong>
+                        Open Source
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =========================================================
+         STACKING CARDS
+         ========================================================= -->
+
+    <main
+        class="security-stack"
+        id="securityCards"
+    >
+
+
+        <!-- =====================================================
+             CARD 01
+             WINDOWS INSTALLER
+             ===================================================== -->
+
+        <section class="security-stack-card card-one">
+
+
+            <div class="stack-card-number">
+                01
+            </div>
+
+
+            <div class="stack-card-content">
+
+
+                <div class="stack-card-header">
+
+
+                    <div>
+
+                        <span class="stack-card-type">
+                            WINDOWS PACKAGE
+                        </span>
+
+                        <h2>
+                            Windows Installer
+                        </h2>
+
+                    </div>
+
+
+                    <div class="security-verified">
+
+                        <span class="security-dot"></span>
+
+                        VERIFIED
+
+                    </div>
+
+
+                </div>
+
+
+
+                <p class="stack-card-description">
+
+                    Compare the downloaded installer against
+                    the published SHA-256 hash and review its
+                    VirusTotal report before running it.
+
+                </p>
+
+
+
+                <div class="security-hash-box">
+
+                    <span>
+                        SHA-256
+                    </span>
+
+                    <code>
+                        5d7dea8620340bac36f475dadb58fbb03dbde29461b934c26d827d715eda64a4
+                    </code>
+
+                </div>
+
+
+
+                <div class="stack-card-actions">
+
+
+                    <a
+                        href="https://www.virustotal.com/gui/file/5d7dea8620340bac36f475dadb58fbb03dbde29461b934c26d827d715eda64a4?nocache=1"
+                        target="_blank"
+                        class="virus-button"
+                    >
+
+                        VIEW VIRUSTOTAL REPORT
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                    <span class="verification-label">
+                        INSTALLER RELEASE
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CARD 02
+             SOURCE CODE
+             ===================================================== -->
+
+        <section class="security-stack-card card-two">
+
+
+            <div class="stack-card-number">
+                02
+            </div>
+
+
+            <div class="stack-card-content">
+
+
+                <div class="stack-card-header">
+
+
+                    <div>
+
+                        <span class="stack-card-type">
+                            SOURCE PACKAGE
+                        </span>
+
+                        <h2>
+                            Source Code
+                        </h2>
+
+                    </div>
+
+
+                    <div class="security-verified">
+
+                        <span class="security-dot"></span>
+
+                        VERIFIED
+
+                    </div>
+
+
+                </div>
+
+
+
+                <p class="stack-card-description">
+
+                    The published source package can also be
+                    checked independently using its own SHA-256
+                    hash and VirusTotal report.
+
+                </p>
+
+
+
+                <div class="security-hash-box">
+
+                    <span>
+                        SHA-256
+                    </span>
+
+                    <code>
+                        5fd59fea3807f61edeee03640b2ee80a0f4c8c16c1ee22fd94473a4cb425df5d
+                    </code>
+
+                </div>
+
+
+
+                <div class="stack-card-actions">
+
+
+                    <a
+                        href="https://www.virustotal.com/gui/file/5fd59fea3807f61edeee03640b2ee80a0f4c8c16c1ee22fd94473a4cb425df5d?nocache=1"
+                        target="_blank"
+                        class="virus-button"
+                    >
+
+                        VIEW VIRUSTOTAL REPORT
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                    <span class="verification-label">
+                        SOURCE RELEASE
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CARD 03
+             ANTICHEAT
+             ===================================================== -->
+
+        <section class="security-stack-card card-three">
+
+
+            <div class="stack-card-number">
+                03
+            </div>
+
+
+            <div class="stack-card-content">
+
+
+                <div class="stack-card-header">
+
+
+                    <div>
+
+                        <span class="stack-card-type">
+                            APPLICATION SECURITY
+                        </span>
+
+                        <h2>
+                            Anti-Cheat System
+                        </h2>
+
+                    </div>
+
+
+                    <div class="security-info-badge">
+                        BUILT IN
+                    </div>
+
+
+                </div>
+
+
+
+                <p class="stack-card-description">
+
+                    The DaBoyzApp includes an internal anti-cheat
+                    that's functionality part of the application.
+                    This system is separate from VirusTotal
+                    file scanning and release verification.
+
+                </p>
+
+
+
+                <div class="anticheat-grid">
+
+
+                    <div class="anticheat-item">
+
+                        <span>
+                            SYSTEM
+                        </span>
+
+                        <strong>
+                            Integrated
+                        </strong>
+
+                    </div>
+
+
+                    <div class="anticheat-item">
+
+                        <span>
+                            PURPOSE
+                        </span>
+
+                        <strong>
+                            App Protection
+                        </strong>
+
+                    </div>
+
+
+                    <div class="anticheat-item">
+
+                        <span>
+                            SCOPE
+                        </span>
+
+                        <strong>
+                            Runtime
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="security-note-box">
+
+                    <span class="security-dot"></span>
+
+                    <p>
+
+                        VirusTotal verifies distributed files.
+                        The anti-cheat system is an internal
+                        application feature. They serve
+                        different purposes.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CARD 04
+             HOW TO VERIFY
+             ===================================================== -->
+
+        <section class="security-stack-card card-four">
+
+
+            <div class="stack-card-number">
+                04
+            </div>
+
+
+            <div class="stack-card-content">
+
+
+                <div class="stack-card-header">
+
+
+                    <div>
+
+                        <span class="stack-card-type">
+                            VERIFICATION GUIDE
+                        </span>
+
+                        <h2>
+                            How to verify a release.
+                        </h2>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="verify-steps">
+
+
+                    <div class="verify-step">
+
+                        <span class="verify-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Download the release
+                            </strong>
+
+                            <p>
+                                Get the installer from the official
+                                DaBoyzApp release page.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="verify-step">
+
+                        <span class="verify-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Generate its SHA-256
+                            </strong>
+
+                            <p>
+                                Calculate the file hash using your
+                                preferred local verification tool.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="verify-step">
+
+                        <span class="verify-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Compare the hash
+                            </strong>
+
+                            <p>
+                                Make sure your result matches the
+                                published hash exactly.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="verify-step">
+
+                        <span class="verify-number">
+                            04
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Review VirusTotal
+                            </strong>
+
+                            <p>
+                                Open the linked VirusTotal report
+                                for additional independent analysis.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CARD 05
+             OPEN SOURCE
+             ===================================================== -->
+
+        <section class="security-stack-card card-five">
+
+
+            <div class="stack-card-number">
+                05
+            </div>
+
+
+            <div class="stack-card-content">
+
+
+                <div class="stack-card-header">
+
+
+                    <div>
+
+                        <span class="stack-card-type">
+                            TRANSPARENCY
+                        </span>
+
+                        <h2>
+                            Inspect the source yourself.
+                        </h2>
+
+                    </div>
+
+
+                    <div class="security-info-badge">
+                        PUBLIC
+                    </div>
+
+
+                </div>
+
+
+
+                <p class="stack-card-description">
+
+                    DaBoyzApp is publicly available on GitHub,
+                    allowing anyone to inspect the project,
+                    review implementation details, and compare
+                    published builds against the codebase.
+
+                </p>
+
+
+
+                <div class="repo-panel">
+
+
+                    <span>
+                        REPOSITORY
+                    </span>
+
+
+                    <strong>
+                        KaroDevGroup / DaBoyzApp
+                    </strong>
+
+
+                    <a
+                        href="https://github.com/KaroDevGroup/DaBoyzApp"
+                        target="_blank"
+                    >
+
+                        OPEN REPOSITORY
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FINAL TRUST PANEL
+         ========================================================= -->
+
+    <section class="security-final">
+
+
+        <div class="security-final-card">
+
+
+            <p class="security-eyebrow">
+                DABOYZAPP SECURITY
+            </p>
+
+
+            <h2>
+                Admins are protected.
+            </h2>
+
+
+            <p>
+
+                Alongside the anti-cheat and manifest
+                scans, DaBoyzApp has multiple authentification
+                checks to keep the Admin Portal at ease. 
+
+            </p>
+
+
+            <div class="security-final-actions">
+
+
+                <a
+                    href="https://github.com/KaroDevGroup/DaBoyzApp"
+                    target="_blank"
+                    class="security-secondary-button"
+                >
+                    VIEW SOURCE
+                </a>
+
+
+                <a
+                    href="https://github.com/KaroDevGroup/DaBoyzApp/releases"
+                    target="_blank"
+                    class="security-primary-button"
+                >
+                    VIEW RELEASES
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <div class="footer-brand-name">
+
+                    <span class="brand-red">
+                        DA
+                    </span>
+
+                    <span>
+                        BOYZAPP
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Da Boyz — Community Hub
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+
+                <a
+                    href="https://github.com/KaroDevGroup"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
+
+
+                <a
+                    href="https://discord.gg/tpcbMxMJjv"
+                    target="_blank"
+                >
+                    Discord
+                </a>
+
+                <a href="/admin/">
+                    Admin Portal
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Da Boyz. All rights reserved.
+            </span>
+
+            <span class="footer-status">
+
+                <span class="security-dot"></span>
+
+                SECURITY CENTER
+
+            </span>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <script src="security.js"></script>
+
+
+</body>
+
+</html>

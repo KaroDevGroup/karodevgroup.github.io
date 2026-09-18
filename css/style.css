@@ -943,11 +943,7 @@ body::before {
         grid-template-columns:
             repeat(2, 1fr);
     }
-
-    .nav-links a:not(.nav-github) {
-        display: none;
-    }
-
+    
     .github-section {
         flex-direction: column;
 

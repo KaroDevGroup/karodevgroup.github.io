@@ -1,0 +1,2258 @@
+/* =========================================================
+   DABOYZAPP
+   DOWNLOAD CENTER
+   ========================================================= */
+
+
+:root {
+
+    --download-red: #e50914;
+    --download-red-light: #ff2a34;
+    --download-red-dark: #780008;
+
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.download-page {
+
+    background:
+        linear-gradient(
+            180deg,
+            #080808,
+            #030303 55%,
+            #010101
+        );
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.download-background {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -5;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+}
+
+
+.download-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        48px 48px;
+
+}
+
+
+.download-glow {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter:
+        blur(130px);
+
+}
+
+
+.download-glow.glow-one {
+
+    width: 800px;
+    height: 800px;
+
+    left: -350px;
+    top: -250px;
+
+    background:
+        rgba(229, 9, 20, 0.16);
+
+}
+
+
+.download-glow.glow-two {
+
+    width: 900px;
+    height: 900px;
+
+    right: -450px;
+    top: 35%;
+
+    background:
+        rgba(150, 0, 10, 0.12);
+
+}
+
+
+.download-glow.glow-three {
+
+    width: 700px;
+    height: 700px;
+
+    left: 20%;
+    bottom: -400px;
+
+    background:
+        rgba(229, 9, 20, 0.08);
+
+}
+
+
+.download-scanlines {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.18;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 3px,
+            rgba(255, 255, 255, 0.014) 4px
+        );
+
+}
+
+
+.download-vignette {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            rgba(0, 0, 0, 0.28) 68%,
+            rgba(0, 0, 0, 0.78)
+        );
+
+}
+
+
+/* =========================================================
+   PAGE PROGRESS
+   ========================================================= */
+
+.download-progress-track {
+
+    position: fixed;
+
+    z-index: 9999999;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+}
+
+
+.download-progress-bar {
+
+    width: 0%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #720007,
+            var(--download-red-light)
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(229, 9, 20, 0.7);
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.download-navbar {
+
+    border-bottom:
+        1px solid rgba(229, 9, 20, 0.12);
+
+}
+
+
+.download-active {
+
+    color:
+        #ffffff !important;
+
+}
+
+
+.download-active::after {
+
+    width:
+        100% !important;
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.download-hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding:
+        150px 20px
+        90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.download-hero-content {
+
+    width:
+        min(
+            950px,
+            100%
+        );
+
+}
+
+
+.download-status {
+
+    width: fit-content;
+
+    margin:
+        0 auto 24px;
+
+    padding:
+        8px 12px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #cfcfcf;
+
+    background:
+        rgba(10, 10, 10, 0.86);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        5px 6px 0 #020202;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.7px;
+
+}
+
+
+.download-status-dot {
+
+    width: 7px;
+    height: 7px;
+
+    display: inline-block;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background:
+        var(--download-red-light);
+
+    box-shadow:
+        0 0 8px rgba(229, 9, 20, 0.9),
+        0 0 20px rgba(229, 9, 20, 0.35);
+
+}
+
+
+.download-eyebrow {
+
+    color:
+        var(--download-red);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+}
+
+
+.download-hero h1 {
+
+    margin-top: 12px;
+
+    font-size:
+        clamp(
+            58px,
+            9vw,
+            104px
+        );
+
+    line-height: 0.9;
+
+    letter-spacing: -6px;
+
+    font-weight: 900;
+
+    text-shadow:
+        0 4px 0 #000,
+        0 15px 35px rgba(0, 0, 0, 0.7);
+
+}
+
+
+.download-hero h1 span {
+
+    display: block;
+
+    color:
+        var(--download-red);
+
+    text-shadow:
+        0 3px 0 #760008,
+        0 7px 0 #370003,
+        0 17px 38px
+        rgba(229, 9, 20, 0.3);
+
+}
+
+
+.download-hero-description {
+
+    max-width: 650px;
+
+    margin:
+        30px auto 0;
+
+    color: #999999;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   HERO RELEASE LINE
+   ========================================================= */
+
+.hero-release-line {
+
+    width: fit-content;
+
+    max-width: 100%;
+
+    margin:
+        40px auto 0;
+
+    padding:
+        13px 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    background:
+        rgba(8, 8, 8, 0.80);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    box-shadow:
+        6px 7px 0 #020202;
+
+    font-size: 9px;
+
+}
+
+
+.hero-release-line span {
+
+    color: #555555;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.hero-release-line strong {
+
+    color: #d8d8d8;
+
+}
+
+
+.hero-release-divider {
+
+    width: 1px;
+    height: 20px;
+
+    margin:
+        0 5px;
+
+    background:
+        rgba(229, 9, 20, 0.35);
+
+}
+
+
+.hero-deploy-button {
+
+    width: fit-content;
+
+    min-width: 200px;
+
+    margin:
+        40px auto 0;
+
+    padding:
+        14px 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ff202c,
+            #d70711
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 6px 0 #770008,
+        0 14px 32px rgba(229, 9, 20, 0.22);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+
+}
+
+
+.hero-deploy-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 9px 0 #770008,
+        0 20px 38px rgba(229, 9, 20, 0.30);
+
+}
+
+
+/* =========================================================
+   HERO SYSTEM LABELS
+   ========================================================= */
+
+.hero-system-label {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    color:
+        rgba(255, 255, 255, 0.16);
+
+    font-family:
+        monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.hero-system-label.left {
+    left: 5%;
+}
+
+
+.hero-system-label.right {
+    right: 5%;
+}
+
+
+/* =========================================================
+   RELEASE STAGE
+   ========================================================= */
+
+.release-stage {
+
+    position: relative;
+
+    height: 250vh;
+
+}
+
+
+.release-stage-sticky {
+
+    position: sticky;
+
+    top: 78px;
+
+    height:
+        calc(
+            100vh -
+            78px
+        );
+
+    padding:
+        28px 5%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.release-stage-label {
+
+    width:
+        min(
+            1150px,
+            100%
+        );
+
+    margin:
+        0 auto 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #494949;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.7px;
+
+}
+
+
+/* =========================================================
+   RELEASE CONSOLE
+   ========================================================= */
+
+.release-console {
+
+    --release-progress: 0;
+
+    position: relative;
+
+    width:
+        min(
+            1150px,
+            100%
+        );
+
+    margin: auto;
+
+    padding:
+        48px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 95% 0%,
+            rgba(229, 9, 20, 0.14),
+            transparent 34%
+        ),
+        linear-gradient(
+            145deg,
+            #171717,
+            #080808
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-top:
+        2px solid rgba(229, 9, 20, 0.75);
+
+    box-shadow:
+        calc(
+            8px +
+            (
+                var(--release-progress) * 10px
+            )
+        )
+        calc(
+            10px +
+            (
+                var(--release-progress) * 12px
+            )
+        )
+        0 #020202,
+
+        0 30px 70px rgba(0, 0, 0, 0.60),
+
+        0 0
+        calc(
+            var(--release-progress) * 35px
+        )
+        rgba(229, 9, 20, 0.08);
+
+    transform:
+
+        translateY(
+            calc(
+                50px -
+                (
+                    var(--release-progress) *
+                    50px
+                )
+            )
+        )
+
+        scale(
+            calc(
+                0.92 +
+                (
+                    var(--release-progress) *
+                    0.08
+                )
+            )
+        )
+
+        rotateX(
+            calc(
+                7deg -
+                (
+                    var(--release-progress) *
+                    7deg
+                )
+            )
+        );
+
+    transform-origin:
+        center top;
+
+    opacity:
+        calc(
+            0.55 +
+            (
+                var(--release-progress) *
+                0.45
+            )
+        );
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+
+/* =========================================================
+   CONSOLE RAILS
+   ========================================================= */
+
+.console-rail {
+
+    position: absolute;
+
+    top: 0;
+
+    width: 2px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(229, 9, 20, 0.75),
+            transparent
+        );
+
+    opacity:
+        var(--release-progress);
+
+}
+
+
+.rail-left {
+    left: 0;
+}
+
+
+.rail-right {
+    right: 0;
+}
+
+
+/* =========================================================
+   CONSOLE CORNERS
+   ========================================================= */
+
+.console-corner {
+
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+
+    opacity:
+        calc(
+            var(--release-progress) *
+            0.8
+        );
+
+}
+
+
+.console-corner.top-left {
+
+    top: 14px;
+    left: 14px;
+
+    border-top:
+        1px solid var(--download-red);
+
+    border-left:
+        1px solid var(--download-red);
+
+}
+
+
+.console-corner.top-right {
+
+    top: 14px;
+    right: 14px;
+
+    border-top:
+        1px solid var(--download-red);
+
+    border-right:
+        1px solid var(--download-red);
+
+}
+
+
+.console-corner.bottom-left {
+
+    bottom: 14px;
+    left: 14px;
+
+    border-bottom:
+        1px solid var(--download-red);
+
+    border-left:
+        1px solid var(--download-red);
+
+}
+
+
+.console-corner.bottom-right {
+
+    right: 14px;
+    bottom: 14px;
+
+    border-right:
+        1px solid var(--download-red);
+
+    border-bottom:
+        1px solid var(--download-red);
+
+}
+
+
+/* =========================================================
+   CONSOLE HEADER
+   ========================================================= */
+
+.console-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+}
+
+
+.console-kicker {
+
+    color:
+        var(--download-red);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+}
+
+
+.console-title-block h2 {
+
+    margin-top: 8px;
+
+    font-size:
+        clamp(
+            42px,
+            6vw,
+            72px
+        );
+
+    letter-spacing: -3px;
+
+}
+
+
+.console-availability {
+
+    padding:
+        8px 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #c6c6c6;
+
+    background: #080808;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.3px;
+
+}
+
+
+/* =========================================================
+   VERSION
+   ========================================================= */
+
+.console-version-row {
+
+    margin-top: 30px;
+
+    padding:
+        23px 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 16px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.055);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.055);
+
+}
+
+
+.console-version-row > div:first-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.console-version-row span {
+
+    color: #525252;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.6px;
+
+}
+
+
+.console-version-row strong {
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+}
+
+
+.beta-chip {
+
+    padding:
+        6px 9px;
+
+    color:
+        var(--download-red-light);
+
+    background:
+        rgba(229, 9, 20, 0.08);
+
+    border:
+        1px solid rgba(229, 9, 20, 0.25);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.3px;
+
+}
+
+
+/* =========================================================
+   CONSOLE STATS
+   ========================================================= */
+
+.console-stats {
+
+    margin-top: 26px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 13px;
+
+}
+
+
+.console-stat {
+
+    padding:
+        18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111111,
+            #080808
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.065);
+
+    border-left:
+        2px solid rgba(229, 9, 20, 0.55);
+
+    box-shadow:
+        5px 6px 0 #020202;
+
+}
+
+
+.console-stat span {
+
+    color: #4e4e4e;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.4px;
+
+}
+
+
+.console-stat strong {
+
+    color: #d6d6d6;
+
+}
+
+
+/* =========================================================
+   DOWNLOAD ZONE
+   ========================================================= */
+
+.console-download-zone {
+
+    margin-top: 30px;
+
+    padding-top: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.055);
+
+}
+
+
+.console-download-copy {
+
+    max-width: 500px;
+
+}
+
+
+.console-download-copy > span {
+
+    color: var(--download-red);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.6px;
+
+}
+
+
+.console-download-copy p {
+
+    margin-top: 8px;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+}
+
+
+.main-download-button {
+
+    min-width: 275px;
+
+    padding:
+        15px 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ff202c,
+            #d70711
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 7px 0 #760008,
+        0 18px 35px rgba(229, 9, 20, 0.24);
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+
+}
+
+
+.main-download-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 0 #760008,
+        0 24px 42px rgba(229, 9, 20, 0.32);
+
+}
+
+
+.main-download-button div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 2px;
+
+}
+
+
+.main-download-button small {
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.main-download-button strong {
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.download-icon {
+
+    font-size: 21px;
+
+}
+
+
+/* =========================================================
+   CONSOLE FOOTER
+   ========================================================= */
+
+.console-footer {
+
+    margin-top: 30px;
+
+    padding-top: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.045);
+
+    color: #505050;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.2px;
+
+}
+
+
+.console-footer div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+/* =========================================================
+   SCANNER
+   ========================================================= */
+
+.console-scanner {
+
+    position: absolute;
+
+    z-index: 10;
+
+    left: 0;
+
+    top:
+        calc(
+            var(--release-progress) *
+            100%
+        );
+
+    width: 100%;
+    height: 1px;
+
+    opacity:
+        calc(
+            1 -
+            var(--release-progress)
+        );
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--download-red-light),
+            transparent
+        );
+
+    box-shadow:
+        0 0 20px rgba(229, 9, 20, 0.8);
+
+}
+
+
+/* =========================================================
+   COMMON SECTION INTRO
+   ========================================================= */
+
+.section-intro {
+
+    max-width: 750px;
+
+    margin:
+        0 auto 65px;
+
+    text-align: center;
+
+}
+
+
+.section-intro h2 {
+
+    margin-top: 8px;
+
+    font-size:
+        clamp(
+            38px,
+            6vw,
+            60px
+        );
+
+    letter-spacing: -3px;
+
+}
+
+
+.section-intro > p:last-child {
+
+    margin-top: 13px;
+
+    color: #777777;
+
+}
+
+
+/* =========================================================
+   PIPELINE
+   ========================================================= */
+
+.pipeline-section {
+
+    position: relative;
+
+    width:
+        min(
+            1050px,
+            90%
+        );
+
+    margin: auto;
+
+    padding:
+        140px 0;
+
+}
+
+
+.pipeline {
+
+    position: relative;
+
+    width:
+        min(
+            820px,
+            100%
+        );
+
+    margin: auto;
+
+}
+
+
+.pipeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 29px;
+
+    width: 2px;
+
+    background:
+        #111111;
+
+}
+
+
+.pipeline-line {
+
+    position: absolute;
+
+    top: 0;
+    left: 29px;
+
+    width: 2px;
+    height: 0%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            var(--download-red-light),
+            var(--download-red-dark)
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(229, 9, 20, 0.5);
+
+}
+
+
+.pipeline-step {
+
+    position: relative;
+
+    min-height: 180px;
+
+    padding-left: 90px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+}
+
+
+.pipeline-node {
+
+    position: absolute;
+
+    z-index: 3;
+
+    left: 0;
+    top: 0;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #555555;
+
+    background:
+        #090909;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        5px 6px 0 #020202;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.pipeline-step.active .pipeline-node {
+
+    color:
+        #ffffff;
+
+    border-color:
+        rgba(229, 9, 20, 0.5);
+
+    box-shadow:
+        5px 6px 0 #020202,
+        0 0 20px rgba(229, 9, 20, 0.13);
+
+}
+
+
+.pipeline-card {
+
+    width: 100%;
+
+    padding:
+        5px 0 55px;
+
+    opacity: 0.40;
+
+    transform:
+        translateX(20px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+
+}
+
+
+.pipeline-step.active .pipeline-card {
+
+    opacity: 1;
+
+    transform:
+        translateX(0);
+
+}
+
+
+.pipeline-card > span {
+
+    color: var(--download-red);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+.pipeline-card h3 {
+
+    margin-top: 8px;
+
+    font-size: 26px;
+
+}
+
+
+.pipeline-card p {
+
+    max-width: 580px;
+
+    margin-top: 10px;
+
+    color: #777777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   VERIFICATION BRIDGE
+   ========================================================= */
+
+.verification-bridge {
+
+    width:
+        min(
+            1180px,
+            92%
+        );
+
+    margin: auto;
+
+    padding:
+        50px 0
+        120px;
+
+}
+
+
+.verification-card {
+
+    padding:
+        38px;
+
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items: center;
+
+    gap: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #080808
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.075);
+
+    border-left:
+        3px solid var(--download-red);
+
+    box-shadow:
+        12px 14px 0 #020202,
+        20px 28px 45px rgba(0, 0, 0, 0.52);
+
+}
+
+
+.verification-icon {
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ffffff;
+
+    background:
+        rgba(229, 9, 20, 0.08);
+
+    border:
+        1px solid rgba(229, 9, 20, 0.25);
+
+    font-size: 24px;
+
+}
+
+
+.verification-copy h2 {
+
+    margin-top: 5px;
+
+    font-size:
+        clamp(
+            28px,
+            4vw,
+            42px
+        );
+
+    letter-spacing: -2px;
+
+}
+
+
+.verification-copy > p:last-child {
+
+    max-width: 650px;
+
+    margin-top: 10px;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+.verification-button {
+
+    min-width: 190px;
+
+    padding:
+        13px 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            180deg,
+            #1b1b1b,
+            #0b0b0b
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.09);
+
+    box-shadow:
+        5px 6px 0 #020202;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   DEVELOPER
+   ========================================================= */
+
+.developer-section {
+
+    width:
+        min(
+            1180px,
+            92%
+        );
+
+    margin: auto;
+
+    padding:
+        30px 0
+        140px;
+
+}
+
+
+.developer-panel {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+
+}
+
+
+.developer-terminal {
+
+    background: #050505;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.075);
+
+    border-top:
+        2px solid var(--download-red);
+
+    box-shadow:
+        12px 14px 0 #020202,
+        18px 25px 45px rgba(0, 0, 0, 0.55);
+
+}
+
+
+.terminal-bar {
+
+    padding:
+        13px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    background:
+        #0c0c0c;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.055);
+
+}
+
+
+.terminal-bar > span {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #333333;
+
+}
+
+
+.terminal-bar > span:first-child {
+
+    background:
+        var(--download-red);
+
+}
+
+
+.terminal-bar small {
+
+    margin-left: auto;
+
+    color: #444444;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+.terminal-body {
+
+    min-height: 185px;
+
+    padding: 28px;
+
+    font-family:
+        monospace;
+
+    color: #989898;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+.terminal-prefix {
+
+    color:
+        var(--download-red);
+
+}
+
+
+.terminal-response {
+
+    margin-top: 18px;
+
+    color: #4f4f4f;
+
+}
+
+
+.developer-copy h2 {
+
+    margin-top: 8px;
+
+    font-size:
+        clamp(
+            35px,
+            5vw,
+            55px
+        );
+
+    letter-spacing: -3px;
+
+}
+
+
+.developer-copy > p:not(.download-eyebrow) {
+
+    margin-top: 17px;
+
+    color: #808080;
+
+    line-height: 1.75;
+
+}
+
+
+.source-button {
+
+    width: fit-content;
+
+    min-width: 215px;
+
+    margin-top: 28px;
+
+    padding:
+        13px 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            180deg,
+            #1a1a1a,
+            #090909
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.09);
+
+    box-shadow:
+        5px 6px 0 #020202;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   FINAL DOWNLOAD
+   ========================================================= */
+
+.final-download-section {
+
+    width:
+        min(
+            1180px,
+            92%
+        );
+
+    margin: auto;
+
+    padding:
+        30px 0
+        150px;
+
+}
+
+
+.final-download-card {
+
+    padding:
+        70px 35px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(229, 9, 20, 0.18),
+            transparent 40%
+        ),
+        linear-gradient(
+            145deg,
+            #161616,
+            #070707
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-top:
+        3px solid var(--download-red);
+
+    box-shadow:
+        15px 18px 0 #020202,
+        0 35px 70px rgba(0, 0, 0, 0.58);
+
+}
+
+
+.final-status {
+
+    width: fit-content;
+
+    margin:
+        0 auto 18px;
+
+    padding:
+        8px 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #bdbdbd;
+
+    background: #080808;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.4px;
+
+}
+
+
+.final-download-card h2 {
+
+    font-size:
+        clamp(
+            48px,
+            8vw,
+            82px
+        );
+
+    letter-spacing: -4px;
+
+}
+
+
+.final-download-card > p {
+
+    margin-top: 8px;
+
+    color: #626262;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.final-download-button {
+
+    width:
+        min(
+            380px,
+            100%
+        );
+
+    margin:
+        35px auto 0;
+
+    padding:
+        17px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ff202c,
+            #d70711
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 7px 0 #760008,
+        0 18px 35px rgba(229, 9, 20, 0.26);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .release-stage {
+
+        height: auto;
+
+        padding:
+            90px 0;
+
+    }
+
+
+    .release-stage-sticky {
+
+        position: relative;
+
+        top: auto;
+
+        height: auto;
+
+    }
+
+
+    .release-console {
+
+        transform:
+            none !important;
+
+        opacity:
+            1 !important;
+
+    }
+
+
+    .console-download-zone {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .main-download-button {
+
+        width: 100%;
+
+    }
+
+
+    .verification-card {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .verification-button {
+
+        width: 100%;
+
+    }
+
+
+    .developer-panel {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .download-hero h1 {
+
+        letter-spacing:
+            -4px;
+
+    }
+
+
+    .hero-release-line {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .hero-system-label {
+
+        display: none;
+
+    }
+
+
+    .release-console {
+
+        padding:
+            34px 22px;
+
+    }
+
+
+    .console-header {
+
+        flex-direction: column;
+
+    }
+
+
+    .console-stats {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .console-footer {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .pipeline-step {
+
+        padding-left:
+            75px;
+
+    }
+
+
+    .verification-card {
+
+        padding:
+            28px 22px;
+
+    }
+
+
+    .final-download-card {
+
+        padding:
+            50px 22px;
+
+    }
+
+}
+
+@media (
+    prefers-reduced-motion:
+    reduce
+) {
+    .release-console {
+        transform:
+            none !important;
+        opacity:
+            1 !important;
+    }
+}

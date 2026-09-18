@@ -1,0 +1,905 @@
+<!-- KaroDevGroup -->
+<!-- Josh Karo -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Behind the scenes of DaBoyzApp development."
+    >
+
+    <title>
+        Behind the Scenes | DaBoyzApp
+    </title>
+
+
+    <!-- MAIN WEBSITE STYLES -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+
+    <!-- SCREENSHOT PAGE -->
+
+    <link
+        rel="stylesheet"
+        href="screenshots.css"
+    >
+
+</head>
+
+
+<body class="screenshots-page">
+
+
+    <!-- =========================================================
+         GLOBAL BACKGROUND
+         ========================================================= -->
+
+    <div class="site-background">
+
+        <div class="bg-red-cloud bg-red-cloud-1"></div>
+        <div class="bg-red-cloud bg-red-cloud-2"></div>
+        <div class="bg-red-cloud bg-red-cloud-3"></div>
+
+        <div class="bg-grid"></div>
+
+        <div class="bg-scanlines"></div>
+
+        <div class="bg-vignette"></div>
+
+    </div>
+
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <div class="side-light left"></div>
+    <div class="side-light right"></div>
+
+
+    <div class="side-glow left"></div>
+    <div class="side-glow right"></div>
+
+
+    <div class="ambient-particles">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         NAVBAR
+         ========================================================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+
+            <a
+                href="../index.html"
+                class="brand main-brand"
+            >
+
+                <img
+                    src="../assets/logo.png"
+                    alt="Da Boyz Logo"
+                >
+
+
+                <div class="brand-lockup">
+
+                    <div class="brand-name">
+
+                        <span class="brand-red">
+                            DA
+                        </span>
+
+                        <span class="brand-white">
+                            BOYZAPP
+                        </span>
+
+                    </div>
+
+
+                    <small>
+                        BEHIND THE SCENES
+                    </small>
+
+                </div>
+
+            </a>
+
+
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+
+            <div
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <a href="../index.html#home">
+                    Home
+                </a>
+
+                <a href="../features/features.html">
+                    Features
+                </a>
+
+                <a href="../download/download.html">
+                    Download
+                </a>
+
+                <a href="../security/security.html">
+                    Security
+                </a>
+
+                <a
+                    href="screenshots.html"
+                    class="screenshots-active"
+                >
+                    Screenshots
+                </a>
+
+                <a
+                    href="../admin/"
+                    class="nav-admin"
+                >
+                    Admin Portal
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================================
+         PAGE HERO
+         ========================================================= -->
+
+    <header class="screenshots-hero">
+
+
+        <div class="screenshots-hero-content">
+
+
+            <div class="screenshots-status">
+
+                <span class="status-dot"></span>
+
+                DEVELOPMENT ARCHIVE
+
+            </div>
+
+
+            <p class="screenshots-eyebrow">
+                BEHIND THE SCENES
+            </p>
+
+
+            <h1>
+
+                Built from the
+
+                <span>
+                    ground up.
+                </span>
+
+            </h1>
+
+
+            <p class="screenshots-description">
+
+                A look behind my code,
+                systems, and development work that drives the 
+
+                <strong>
+                    DaBoyzApp.
+                </strong>
+
+            </p>
+
+
+            <div class="scroll-prompt">
+
+                <span>
+                    SCROLL TO EXPLORE
+                </span>
+
+                <div class="scroll-prompt-line"></div>
+
+                <span class="scroll-arrow">
+                    ↓
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =========================================================
+         REVERSE SCROLLING COLUMNS
+         ========================================================= -->
+
+    <main
+        class="gallery-scroll-stage"
+        id="galleryScrollStage"
+    >
+
+
+        <div class="gallery-sticky">
+
+
+            <!-- TOP LABEL -->
+
+            <div class="gallery-topbar">
+
+
+                <div>
+
+                    <span class="gallery-number">
+                        12
+                    </span>
+
+                    <span class="gallery-label">
+                        DEVELOPMENT CAPTURES
+                    </span>
+
+                </div>
+
+
+                <div class="gallery-direction">
+
+                    <span>
+                        CODE
+                    </span>
+
+                    <span class="red-separator">
+                        /
+                    </span>
+
+                    <span>
+                        XAML
+                    </span>
+
+                    <span class="red-separator">
+                        /
+                    </span>
+
+                    <span>
+                        C#
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- SCREENSHOT VIEWPORT -->
+
+            <div class="gallery-window">
+
+
+                <div class="gallery-columns">
+
+
+                    <!-- =========================================
+                         LEFT COLUMN
+                         MOVES UP
+                         ========================================= -->
+
+                    <div
+                        class="gallery-column column-up"
+                        data-direction="up"
+                    >
+
+
+                        <button
+                            class="code-shot"
+                            type="button"
+                            data-image="../assets/screenshots/code01.png"
+                            aria-label="Open development screenshot 1"
+                        >
+
+                            <span class="shot-number">
+                                01
+                            </span>
+
+                            <img
+                                src="../assets/screenshots/code01.png"
+                                alt="DaBoyzApp development screenshot 1"
+                                loading="eager"
+                            >
+
+                        </button>
+
+
+
+                        <button
+                            class="code-shot"
+                            type="button"
+                            data-image="../assets/screenshots/code04.png"
+                            aria-label="Open development screenshot 4"
+                        >
+
+                            <span class="shot-number">
+                                04
+                            </span>
+
+                            <img
+                                src="../assets/screenshots/code04.png"
+                                alt="DaBoyzApp development screenshot 4"
+                                loading="lazy"
+                            >
+
+                        </button>
+
+
+
+                        <button
+                            class="code-shot"
+                            type="button"
+                            data-image="../assets/screenshots/code07.png"
+                            aria-label="Open development screenshot 7"
+                        >
+
+                            <span class="shot-number">
+                                07
+                            </span>
+
+                            <img
+                                src="../assets/screenshots/code07.png"
+                                alt="DaBoyzApp development screenshot 7"
+                                loading="lazy"
+                            >
+
+                        </button>
+
+
+
+                        <button
+                            class="code-shot"
+                            type="button"
+                            data-image="../assets/screenshots/code10.png"
+                            aria-label="Open development screenshot 10"
+                        >
+
+                            <span class="shot-number">
+                                10
+                            </span>
+
+                            <img
+                                src="../assets/screenshots/code10.png"
+                                alt="DaBoyzApp development screenshot 10"
+                                loading="lazy"
+                            >
+
+                        </button>
+
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         MIDDLE COLUMN
+                         MOVES DOWN
+                         ========================================= -->
+
+                    <div
+                        class="gallery-column column-down"
+                        data-direction="down"
+                    >
+
+
+                        <button
+                            class="code-shot"
+                            type="button"
+                            data-image="../assets/screenshots/code02.png"
+                            aria-label="Open development screenshot 2"
+                        >
+
+                            <span class="shot-number">
+                                02
+                            </span>
+
+                            <img
+                                src="../assets/screenshots/code02.png"
+                                alt="DaBoyzApp development screenshot 2"
+                                loading="eager"
+                            >
+
+                        </button>
+
+
+
+                        <button
+                            class="code-shot"
+                            type="button"
+                            data-image="../assets/screenshots/code05.png"
+                            aria-label="Open development screenshot 5"
+                        >
+
+                            <span class="shot-number">
+                                05
+                            </span>
+
+                            <img
+                                src="../assets/screenshots/code05.png"
+                                alt="DaBoyzApp development screenshot 5"
+                                loading="lazy"
+                            >
+
+                        </button>
+
+
+
+                        <button
+                            class="code-shot"
+                            type="button"
+                            data-image="../assets/screenshots/code08.png"
+                            aria-label="Open development screenshot 8"
+                        >
+
+                            <span class="shot-number">
+                                08
+                            </span>
+
+                            <img
+                                src="../assets/screenshots/code08.png"
+                                alt="DaBoyzApp development screenshot 8"
+                                loading="lazy"
+                            >
+
+                        </button>
+
+
+
+                        <button
+                            class="code-shot"
+                            type="button"
+                            data-image="../assets/screenshots/code11.png"
+                            aria-label="Open development screenshot 11"
+                        >
+
+                            <span class="shot-number">
+                                11
+                            </span>
+
+                            <img
+                                src="../assets/screenshots/code11.png"
+                                alt="DaBoyzApp development screenshot 11"
+                                loading="lazy"
+                            >
+
+                        </button>
+
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         RIGHT COLUMN
+                         MOVES UP
+                         ========================================= -->
+
+                    <div
+                        class="gallery-column column-up"
+                        data-direction="up"
+                    >
+
+
+                        <button
+                            class="code-shot"
+                            type="button"
+                            data-image="../assets/screenshots/code03.png"
+                            aria-label="Open development screenshot 3"
+                        >
+
+                            <span class="shot-number">
+                                03
+                            </span>
+
+                            <img
+                                src="../assets/screenshots/code03.png"
+                                alt="DaBoyzApp development screenshot 3"
+                                loading="eager"
+                            >
+
+                        </button>
+
+
+
+                        <button
+                            class="code-shot"
+                            type="button"
+                            data-image="../assets/screenshots/code06.png"
+                            aria-label="Open development screenshot 6"
+                        >
+
+                            <span class="shot-number">
+                                06
+                            </span>
+
+                            <img
+                                src="../assets/screenshots/code06.png"
+                                alt="DaBoyzApp development screenshot 6"
+                                loading="lazy"
+                            >
+
+                        </button>
+
+
+
+                        <button
+                            class="code-shot"
+                            type="button"
+                            data-image="../assets/screenshots/code09.png"
+                            aria-label="Open development screenshot 9"
+                        >
+
+                            <span class="shot-number">
+                                09
+                            </span>
+
+                            <img
+                                src="../assets/screenshots/code09.png"
+                                alt="DaBoyzApp development screenshot 9"
+                                loading="lazy"
+                            >
+
+                        </button>
+
+
+
+                        <button
+                            class="code-shot"
+                            type="button"
+                            data-image="../assets/screenshots/code12.png"
+                            aria-label="Open development screenshot 12"
+                        >
+
+                            <span class="shot-number">
+                                12
+                            </span>
+
+                            <img
+                                src="../assets/screenshots/code12.PNG"
+                                alt="DaBoyzApp development screenshot 12"
+                                loading="lazy"
+                            >
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="gallery-vignette top"></div>
+                <div class="gallery-vignette bottom"></div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================================================
+         DEVELOPMENT STACK
+         ========================================================= -->
+
+    <section class="build-section">
+
+
+        <div class="build-card">
+
+
+            <div class="build-content">
+
+
+                <p class="small-heading">
+                    THE BUILD
+                </p>
+
+
+                <h2>
+                    More than just an interface.
+                </h2>
+
+
+                <p>
+
+                    DaBoyzApp combines desktop UI,
+                    application logic, authentication,
+                    databases, community tools, and
+                    custom integrations into one project.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="build-tech">
+
+
+                <span>
+                    C#
+                </span>
+
+                <span>
+                    WPF
+                </span>
+
+                <span>
+                    .NET
+                </span>
+
+                <span>
+                    XAML
+                </span>
+
+                <span>
+                    SUPABASE
+                </span>
+
+                <span>
+                    DISCORD
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         BACK TO HOME
+         ========================================================= -->
+
+    <section class="return-section">
+
+
+        <p class="small-heading">
+            DABOYZAPP
+        </p>
+
+
+        <h2>
+            Ready to head back?
+        </h2>
+
+
+        <a
+            href="../index.html"
+            class="button primary-button return-button"
+        >
+
+            <span>
+                BACK TO MAIN WEBSITE
+            </span>
+
+            <span class="button-arrow">
+                →
+            </span>
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+
+                <div class="footer-brand-name">
+
+                    <span class="brand-red">
+                        DA
+                    </span>
+
+                    <span>
+                        BOYZAPP
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Da Boyz — Community Hub
+                </p>
+
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+
+                <a
+                    href="https://github.com/KaroDevGroup"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
+
+
+                <a href="../admin/">
+                    Admin Portal
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+
+            <span>
+                © 2026 Da Boyz. All rights reserved.
+            </span>
+
+
+            <span class="footer-status">
+
+                <span class="status-dot"></span>
+
+                DEVELOPMENT ARCHIVE
+
+            </span>
+
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         IMAGE LIGHTBOX
+         ========================================================= -->
+
+    <div
+        class="shot-lightbox"
+        id="shotLightbox"
+        aria-hidden="true"
+    >
+
+
+        <button
+            class="lightbox-close"
+            id="lightboxClose"
+            type="button"
+            aria-label="Close screenshot"
+        >
+            ×
+        </button>
+
+
+        <div class="lightbox-frame">
+
+            <img
+                id="lightboxImage"
+                src=""
+                alt="Expanded DaBoyzApp development screenshot"
+            >
+
+        </div>
+
+
+        <span class="lightbox-hint">
+            CLICK OUTSIDE OR PRESS ESC TO CLOSE
+        </span>
+
+
+    </div>
+
+
+
+    <script src="screenshots.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,955 @@
+<!-- KaroDevGroup -->
+<!-- Josh Karo -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Download the latest public release of DaBoyzApp."
+    >
+
+    <title>
+        Download Center | DaBoyzApp
+    </title>
+
+
+    <!-- GLOBAL SITE CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+
+    <!-- DOWNLOAD PAGE -->
+
+    <link
+        rel="stylesheet"
+        href="download.css"
+    >
+
+</head>
+
+
+<body class="download-page">
+
+
+    <!-- =========================================================
+         BACKGROUND
+         ========================================================= -->
+
+    <div class="download-background">
+
+        <div class="download-grid"></div>
+
+        <div class="download-glow glow-one"></div>
+        <div class="download-glow glow-two"></div>
+        <div class="download-glow glow-three"></div>
+
+        <div class="download-scanlines"></div>
+
+        <div class="download-vignette"></div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         TOP PROGRESS BAR
+         ========================================================= -->
+
+    <div class="download-progress-track">
+
+        <div
+            class="download-progress-bar"
+            id="downloadProgressBar"
+        ></div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         NAVIGATION
+         ========================================================= -->
+
+    <nav class="navbar download-navbar">
+
+        <div class="nav-container">
+
+
+            <a
+                href="../index.html"
+                class="brand main-brand"
+            >
+
+                <img
+                    src="../assets/logo.png"
+                    alt="Da Boyz Logo"
+                >
+
+
+                <div class="brand-lockup">
+
+                    <div class="brand-name">
+
+                        <span class="brand-red">
+                            DA
+                        </span>
+
+                        <span class="brand-white">
+                            BOYZAPP
+                        </span>
+
+                    </div>
+
+
+                    <small>
+                        DOWNLOAD CENTER
+                    </small>
+
+                </div>
+
+            </a>
+
+
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+
+            <div
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <a href="../index.html#home">
+                    Home
+                </a>
+
+                <a href="../features/features.html">
+                    Features
+                </a>
+
+                <a
+                    href="download.html"
+                    class="download-active"
+                >
+                    Download
+                </a>
+
+                <a href="../security/security.html">
+                    Security
+                </a>
+
+                <a href="../screenshots/screenshots.html">
+                    Screenshots
+                </a>
+
+                <a
+                    href="../admin/"
+                    class="nav-admin"
+                >
+                    Admin Portal
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+
+    <header class="download-hero">
+
+
+        <div class="download-hero-content">
+
+
+            <div class="download-status">
+
+                <span class="download-status-dot"></span>
+
+                LATEST PUBLIC RELEASE
+
+            </div>
+
+
+            <p class="download-eyebrow">
+                DABOYZAPP DEPLOYMENT CENTER
+            </p>
+
+
+            <h1>
+
+                Ready when
+
+                <span>
+                    you are.
+                </span>
+
+            </h1>
+
+
+            <p class="download-hero-description">
+
+                Download the latest public build of the
+                Da Boyz Community Hub for Windows.
+
+            </p>
+
+
+            <div class="hero-release-line">
+
+                <span>
+                    VERSION
+                </span>
+
+                <strong>
+                    v1.2.0 Beta
+                </strong>
+
+                <span class="hero-release-divider"></span>
+
+                <span>
+                    PLATFORM
+                </span>
+
+                <strong>
+                    Windows x64
+                </strong>
+
+            </div>
+
+
+            <a
+                href="#release"
+                class="hero-deploy-button"
+            >
+
+                <span>
+                    VIEW RELEASE
+                </span>
+
+                <span>
+                    ↓
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+        <div class="hero-system-label left">
+            RELEASE_CHANNEL://PUBLIC
+        </div>
+
+        <div class="hero-system-label right">
+            STATUS://AVAILABLE
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =========================================================
+         RELEASE ASSEMBLY STAGE
+         ========================================================= -->
+
+    <main
+        class="release-stage"
+        id="release"
+    >
+
+
+        <div class="release-stage-sticky">
+
+
+            <div class="release-stage-label">
+
+                <span>
+                    BUILD DEPLOYMENT
+                </span>
+
+                <span>
+                    01 / RELEASE
+                </span>
+
+            </div>
+
+
+
+            <!-- RELEASE CARD -->
+
+            <article
+                class="release-console"
+                id="releaseConsole"
+            >
+
+
+                <!-- DECORATION -->
+
+                <div class="console-rail rail-left"></div>
+                <div class="console-rail rail-right"></div>
+
+                <div class="console-corner top-left"></div>
+                <div class="console-corner top-right"></div>
+                <div class="console-corner bottom-left"></div>
+                <div class="console-corner bottom-right"></div>
+
+
+                <!-- HEADER -->
+
+                <div class="console-header">
+
+
+                    <div class="console-title-block">
+
+                        <span class="console-kicker">
+                            OFFICIAL RELEASE
+                        </span>
+
+                        <h2>
+                            DaBoyzApp
+                        </h2>
+
+                    </div>
+
+
+                    <div class="console-availability">
+
+                        <span class="download-status-dot"></span>
+
+                        AVAILABLE
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- VERSION -->
+
+                <div class="console-version-row">
+
+
+                    <div>
+
+                        <span>
+                            CURRENT VERSION
+                        </span>
+
+                        <strong>
+                            v1.2.0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="beta-chip">
+                        BETA
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- STATS -->
+
+                <div class="console-stats">
+
+
+                    <div class="console-stat">
+
+                        <span>
+                            PLATFORM
+                        </span>
+
+                        <strong>
+                            Windows x64
+                        </strong>
+
+                    </div>
+
+
+                    <div class="console-stat">
+
+                        <span>
+                            ACCESS
+                        </span>
+
+                        <strong>
+                            Public
+                        </strong>
+
+                    </div>
+
+
+                    <div class="console-stat">
+
+                        <span>
+                            LANGUAGES
+                        </span>
+
+                        <strong>
+                            C# / Python / SQL
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PRIMARY DOWNLOAD -->
+
+                <div class="console-download-zone">
+
+
+                    <div class="console-download-copy">
+
+                        <span>
+                            INSTALLER PACKAGE
+                        </span>
+
+                        <p>
+                            Download the current DaBoyzApp
+                            release from the official GitHub
+                            Releases page.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/KaroDevGroup/DaBoyzApp/releases"
+                        target="_blank"
+                        class="main-download-button"
+                    >
+
+                        <div>
+
+                            <small>
+                                DOWNLOAD
+                            </small>
+
+                            <strong>
+                                INSTALLER
+                            </strong>
+
+                        </div>
+
+
+                        <span class="download-icon">
+                            ↓
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+
+                <!-- STATUS FOOTER -->
+
+                <div class="console-footer">
+
+
+                    <div>
+
+                        <span class="download-status-dot"></span>
+
+                        RELEASE ONLINE
+
+                    </div>
+
+
+                    <div>
+                        SHA-256 AVAILABLE
+                    </div>
+
+
+                    <div>
+                        VIRUSTOTAL AVAILABLE
+                    </div>
+
+
+                </div>
+
+
+                <!-- SCANNER -->
+
+                <div class="console-scanner"></div>
+
+
+            </article>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================================================
+         INSTALL PIPELINE
+         ========================================================= -->
+
+    <section class="pipeline-section">
+
+
+        <div class="section-intro">
+
+            <p class="download-eyebrow">
+                DEPLOYMENT PIPELINE
+            </p>
+
+            <h2>
+                From download to launch.
+            </h2>
+
+            <p>
+                Four steps. One application.
+            </p>
+
+        </div>
+
+
+
+        <div class="pipeline">
+
+
+            <div
+                class="pipeline-line"
+                id="pipelineLine"
+            ></div>
+
+
+
+            <!-- STEP 1 -->
+
+            <article class="pipeline-step">
+
+
+                <div class="pipeline-node">
+                    01
+                </div>
+
+
+                <div class="pipeline-card">
+
+                    <span>
+                        DOWNLOAD
+                    </span>
+
+                    <h3>
+                        Get the release.
+                    </h3>
+
+                    <p>
+                        Open the official GitHub Releases page
+                        and download the current Windows installer.
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- STEP 2 -->
+
+            <article class="pipeline-step">
+
+
+                <div class="pipeline-node">
+                    02
+                </div>
+
+
+                <div class="pipeline-card">
+
+                    <span>
+                        VERIFY
+                    </span>
+
+                    <h3>
+                        Check the file.
+                    </h3>
+
+                    <p>
+                        Compare the release hash and review
+                        the published VirusTotal report from
+                        the Security Center.
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- STEP 3 -->
+
+            <article class="pipeline-step">
+
+
+                <div class="pipeline-node">
+                    03
+                </div>
+
+
+                <div class="pipeline-card">
+
+                    <span>
+                        INSTALL
+                    </span>
+
+                    <h3>
+                        Run the installer.
+                    </h3>
+
+                    <p>
+                        Launch the downloaded installer and
+                        complete the DaBoyzApp installation.
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- STEP 4 -->
+
+            <article class="pipeline-step">
+
+
+                <div class="pipeline-node">
+                    04
+                </div>
+
+
+                <div class="pipeline-card">
+
+                    <span>
+                        LAUNCH
+                    </span>
+
+                    <h3>
+                        Welcome to DaBoyzApp.
+                    </h3>
+
+                    <p>
+                        Open the Community Hub and access
+                        the features included in the current release.
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         VERIFY BEFORE INSTALL
+         ========================================================= -->
+
+    <section class="verification-bridge">
+
+
+        <div class="verification-card">
+
+
+            <div class="verification-icon">
+
+                <span>
+                    ✓
+                </span>
+
+            </div>
+
+
+            <div class="verification-copy">
+
+                <p class="download-eyebrow">
+                    BEFORE YOU INSTALL
+                </p>
+
+                <h2>
+                    Want to verify it first?
+                </h2>
+
+                <p>
+                    Open the DaBoyzApp Security Center to view
+                    the published SHA-256 hashes, VirusTotal
+                    reports, and release verification information.
+                </p>
+
+            </div>
+
+
+            <a
+                href="../security/security.html"
+                class="verification-button"
+            >
+
+                SECURITY CENTER
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         DEVELOPER / SOURCE
+         ========================================================= -->
+
+    <section class="developer-section">
+
+
+        <div class="developer-panel">
+
+
+            <div class="developer-terminal">
+
+
+                <div class="terminal-bar">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <small>
+                        SOURCE://DABOYZAPP
+                    </small>
+
+                </div>
+
+
+                <div class="terminal-body">
+
+                    <p>
+                        <span class="terminal-prefix">
+                            $
+                        </span>
+
+                        git clone
+                        https://github.com/KaroDevGroup/DaBoyzApp
+                    </p>
+
+                    <p class="terminal-response">
+                        Repository ready for inspection.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="developer-copy">
+
+                <p class="download-eyebrow">
+                    DEVELOPER ACCESS
+                </p>
+
+                <h2>
+                    Want the source instead?
+                </h2>
+
+                <p>
+                    Browse the project, inspect the implementation,
+                    or clone the DaBoyzApp repository directly
+                    from GitHub.
+                </p>
+
+
+                <a
+                    href="https://github.com/KaroDevGroup/DaBoyzApp"
+                    target="_blank"
+                    class="source-button"
+                >
+
+                    OPEN SOURCE CODE
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+
+                <div class="footer-brand-name">
+
+                    <span class="brand-red">
+                        DA
+                    </span>
+
+                    <span>
+                        BOYZAPP
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Da Boyz — Community Hub
+                </p>
+
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+
+                <a
+                    href="https://github.com/KaroDevGroup"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
+
+
+                <a
+                    href="https://discord.gg/tpcbMxMJjv"
+                    target="_blank"
+                >
+                    Discord
+                </a>
+
+                <a href="/admin/">
+                    Admin Portal
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+
+            <span>
+                © 2026 Da Boyz. All rights reserved.
+            </span>
+
+
+            <span class="footer-status">
+
+                <span class="download-status-dot"></span>
+
+                DOWNLOAD CENTER
+
+            </span>
+
+
+        </div>
+
+
+    </footer>
+
+
+
+    <script src="download.js"></script>
+
+
+</body>
+
+</html>

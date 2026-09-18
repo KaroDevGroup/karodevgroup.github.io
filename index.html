@@ -2,8 +2,12 @@
 <!-- Josh Karo -->
 
 <!DOCTYPE html>
+
 <html lang="en">
+
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -16,36 +20,70 @@
         content="DaBoyzApp - The official Da Boyz Community Hub."
     >
 
-    <title>DaBoyzApp | Community Hub</title>
+    <title>
+        DaBoyzApp | Community Hub
+    </title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
 </head>
+
 
 <body>
 
+
+    <!-- =========================================================
+         GLOBAL BACKGROUND
+         ========================================================= -->
+
     <div class="site-background">
+
         <div class="bg-red-cloud bg-red-cloud-1"></div>
         <div class="bg-red-cloud bg-red-cloud-2"></div>
         <div class="bg-red-cloud bg-red-cloud-3"></div>
 
         <div class="bg-grid"></div>
+
         <div class="bg-scanlines"></div>
+
         <div class="bg-vignette"></div>
+
     </div>
+
 
     <div class="background-glow glow-one"></div>
     <div class="background-glow glow-two"></div>
 
+
     <div class="side-light left"></div>
     <div class="side-light right"></div>
+
 
     <div class="side-glow left"></div>
     <div class="side-glow right"></div>
 
+
     <div class="ambient-particles">
+
         <span></span>
         <span></span>
         <span></span>
@@ -54,322 +92,995 @@
         <span></span>
         <span></span>
         <span></span>
+
     </div>
 
+
+
+    <!-- =========================================================
+         NAVIGATION
+         ========================================================= -->
+
     <nav class="navbar">
+
         <div class="nav-container">
 
-            <a href="#home" class="brand">
-                <img src="assets/logo.png" alt="Da Boyz Logo">
-                <span>DaBoyzApp</span>
+
+            <!-- BRAND -->
+
+            <a
+                href="#home"
+                class="brand main-brand"
+            >
+
+                <img
+                    src="assets/logo.png"
+                    alt="Da Boyz Logo"
+                >
+
+
+                <div class="brand-lockup">
+
+                    <div class="brand-name">
+
+                        <span class="brand-red">
+                            DA
+                        </span>
+
+                        <span class="brand-white">
+                            BOYZAPP
+                        </span>
+
+                    </div>
+
+
+                    <small>
+                        COMMUNITY HUB
+                    </small>
+
+                </div>
+
             </a>
 
-            <button 
+
+
+            <!-- MOBILE BUTTON -->
+
+            <button
                 class="mobile-menu-button"
                 id="mobileMenuButton"
                 type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
             >
+
                 <span></span>
                 <span></span>
                 <span></span>
+
             </button>
 
-            <div class="nav-links" id="navLinks">
-                <a href="#features">Features</a>
-                <a href="#download">Download</a>
-                <a href="#security">Security</a>
-                <a href="/admin/">Admin Portal</a>
+
+
+            <!-- NAV LINKS -->
+
+            <div
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="features/features.html">
+                    Features
+                </a>
+
+                <a href="download/download.html">
+                    Download
+                </a>
+
+                <a href="security/security.html">
+                    Security
+                </a>
+
+                <a href="screenshots/screenshots.html">
+                    Screenshots
+                </a>
 
                 <a
-                    href="https://github.com/KaroDevGroup"
-                    target="_blank"
-                    class="nav-github"
+                    href="/admin/"
+                    class="nav-admin"
                 >
-                    GitHub
+                    Admin Portal
                 </a>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================================
+         COVER BANNER
+         ========================================================= -->
+
+    <section class="cover-banner-section">
+
+        <div class="cover-banner-shell">
+
+            <div
+                class="cover-banner-card"
+                id="coverBanner"
+            >
+
+                <img
+                    src="assets/banner.png"
+                    alt="Da Boyz Banner"
+                >
+
+                <div class="cover-banner-overlay"></div>
+
+                <div class="cover-banner-corner top-left"></div>
+                <div class="cover-banner-corner top-right"></div>
+                <div class="cover-banner-corner bottom-left"></div>
+                <div class="cover-banner-corner bottom-right"></div>
+
             </div>
 
         </div>
-    </nav>
 
-    <main id="home" class="hero stack-section">
+    </section>
+
+
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+
+    <main
+        id="home"
+        class="hero stack-section"
+    >
+
 
         <div class="hero-content">
 
-            <div class="beta-badge">
-                BETA RELEASE
+
+            <!-- STATUS -->
+
+            <div class="hero-status">
+
+                <span class="status-dot"></span>
+
+                <span>
+                    BETA RELEASE
+                </span>
+
             </div>
 
+
+
+            <!-- EYEBROW -->
+
+            <p class="hero-eyebrow">
+                THE OFFICIAL COMMUNITY HUB
+            </p>
+
+
+
+            <!-- TITLE -->
+
             <h1>
+
                 Welcome to
-                <span>DaBoyzApp</span>
+
+                <span>
+                    DaBoyzApp
+                </span>
+
             </h1>
 
+
+
+            <!-- DESCRIPTION -->
+
             <p class="hero-subtitle">
-                The official desktop community hub for Da Boyz.
-                Gaming resources, music, patch notes, administration
-                tools, and more — all in one place.
+
+                Gaming resources, music, patch notes,
+                administration tools, and community features —
+
+                <strong>
+                    everything Da Boyz in one place.
+                </strong>
+
             </p>
+
+
+
+            <!-- ACTIONS -->
 
             <div class="hero-buttons">
 
+
                 <a
-                    href="https://github.com/KaroDevGroup/DaBoyzApp/releases"
+                    href="download/download.html"
                     class="button primary-button"
                 >
-                    Download DaBoyzApp
+
+                    <span>
+                        DOWNLOAD DABOYZAPP
+                    </span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
                 </a>
+
 
                 <a
                     href="https://github.com/KaroDevGroup/DaBoyzApp"
                     target="_blank"
                     class="button secondary-button"
                 >
-                    View Source
+
+                    <span>
+                        VIEW SOURCE
+                    </span>
+
+                    <span class="button-arrow">
+                        ↗
+                    </span>
+
                 </a>
 
+
             </div>
+
+
+
+            <!-- PRODUCT INFO -->
 
             <div class="hero-info">
-                <span>Windows x64</span>
-                <span>•</span>
-                <span>Free</span>
-                <span>•</span>
-                <span>Open Source</span>
+
+
+                <div class="hero-info-item">
+
+                    <span class="info-label">
+                        PLATFORM
+                    </span>
+
+                    <strong>
+                        Windows x64
+                    </strong>
+
+                </div>
+
+
+                <div class="hero-info-item">
+
+                    <span class="info-label">
+                        LICENSE
+                    </span>
+
+                    <strong>
+                        Apache 2.0
+                    </strong>
+
+                </div>
+
+
+                <div class="hero-info-item">
+
+                    <span class="info-label">
+                        LANGUAGES
+                    </span>
+
+                    <strong>
+                        C# / Python / SQL
+                    </strong>
+
+                </div>
+
+
             </div>
 
+
         </div>
+
+
+        <!-- HERO DECORATION -->
+
+        <div class="hero-corner hero-corner-top"></div>
+
+        <div class="hero-corner hero-corner-bottom"></div>
+
 
     </main>
 
-    <section id="features" class="section stack-section">
 
-        <div class="section-heading">
-            <p>THE COMMUNITY HUB</p>
-            <h2>Everything in one place.</h2>
-        </div>
 
-        <div class="feature-grid">
+    <!-- =========================================================
+         OPEN SOURCE LICENSE
+         ========================================================= -->
 
-            <div class="feature-card">
-                <div class="feature-icon">🎮</div>
+    <section
+        class="license-section"
+        id="license"
+    >
 
-                <h3>Gaming Database</h3>
 
-                <p>
-                    Browse community resources, information,
-                    mechanics, weapons, vehicles, and guides for
-                    supported games.
-                </p>
-            </div>
+        <div class="license-card">
 
-            <div class="feature-card">
-                <div class="feature-icon">🎵</div>
 
-                <h3>Music Database</h3>
+            <!-- DECORATION -->
 
-                <p>
-                    Listen to original beats and instrumentals
-                    directly inside the DaBoyzApp.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">📝</div>
-
-                <h3>Patch Notes</h3>
-
-                <p>
-                    Keep up with DaBoyzApp updates, improvements,
-                    bug fixes, and community changes.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">🔒</div>
-
-                <h3>Admin Portal</h3>
-
-                <p>
-                    A dedicated area for authorized administrators
-                    to access internal community information and tools.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="security" class="section stack-section">
-
-        <div class="section-heading">
-            <p>VERIFIED</p>
-            <h2>Security & Transparency</h2>
-
-            <span class="section-description">
-                Verify DaBoyzApp downloads independently with
-                VirusTotal and SHA-256 hashes.
-            </span>
-        </div>
-
-        <div class="security-grid">
-
-            <div class="security-card">
-
-                <h3>Windows Installer</h3>
-
-                <p class="hash">
-                    5d7dea8620340bac36f475dadb58fbb03dbde29461b934c26d827d715eda64a4
-                </p>
-
-                <a
-                    href="https://www.virustotal.com/gui/file/5d7dea8620340bac36f475dadb58fbb03dbde29461b934c26d827d715eda64a4?nocache=1"
-                    target="_blank"
-                    class="virustotal-button"
-                >
-                    View on VirusTotal
-                </a>
-
-            </div>
-
-            <div class="security-card">
-
-                <h3>Source Code</h3>
-
-                <p class="hash">
-                    5fd59fea3807f61edeee03640b2ee80a0f4c8c16c1ee22fd94473a4cb425df5d
-                </p>
-
-                <a
-                    href="https://www.virustotal.com/gui/file/5fd59fea3807f61edeee03640b2ee80a0f4c8c16c1ee22fd94473a4cb425df5d?nocache=1"
-                    target="_blank"
-                    class="virustotal-button"
-                >
-                    View on VirusTotal
-                </a>
-
+            <div class="license-card-number">
+                2.0
             </div>
 
 
-        </div>
+            <div class="license-corner top-left"></div>
+            <div class="license-corner top-right"></div>
+            <div class="license-corner bottom-left"></div>
+            <div class="license-corner bottom-right"></div>
 
-    </section>
 
-    <section id="download" class="section stack-section">
 
-        <div class="download-card">
+            <!-- LEFT -->
 
-            <p class="small-heading">
-                LATEST RELEASE
-            </p>
+            <div class="license-main">
 
-            <h2>
-                Download DaBoyzApp
-            </h2>
 
-            <p>
-                Download the latest Windows build of the
-                Da Boyz Community Hub.
-            </p>
+                <div class="license-status">
 
-            <div class="release-info">
+                    <span class="status-dot"></span>
 
-                <div>
-                    <span>Version</span>
-                    <strong>v1.2.0 Beta</strong>
+                    OPEN SOURCE LICENSE
+
                 </div>
 
-                <div>
-                    <span>Platform</span>
-                    <strong>Windows x64</strong>
-                </div>
 
-                <div>
-                    <span>Price</span>
-                    <strong>Free</strong>
-                </div>
-
-            </div>
-
-            <a
-                href="https://github.com/KaroDevGroup/DaBoyzApp/releases"
-                class="button primary-button"
-            >
-                Download Installer
-            </a>
-
-        </div>
-
-    </section>
-
-    <section class="section stack-section">
-
-        <div class="github-section">
-
-            <div>
-
-                <p class="small-heading">
-                    OPEN SOURCE
+                <p class="license-eyebrow">
+                    APACHE SOFTWARE FOUNDATION
                 </p>
 
 
                 <h2>
-                    Want to see how it works?
+                    Apache License
+                    <span>
+                        2.0
+                    </span>
                 </h2>
 
 
-                <p>
-                    Browse the source code, clone the repository,
-                    report issues, or contribute to DaBoyzApp
-                    directly through GitHub.
+                <p class="license-description">
+
+                    DaBoyzApp is distributed under the
+                    Apache License, Version 2.0.
+
+                    Review the full license for the terms
+                    governing use, reproduction,
+                    modification, and distribution.
+
                 </p>
+
+
+
+                <div class="license-actions">
+
+
+                    <a
+                        href="LICENSE.txt"
+                        target="_blank"
+                        class="license-primary-button"
+                    >
+
+                        <span>
+                            VIEW FULL LICENSE
+                        </span>
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                </div>
+
 
             </div>
 
-            <a
-                href="https://github.com/KaroDevGroup/DaBoyzApp"
-                target="_blank"
-                class="button secondary-button"
-            >
-                Open GitHub Repository
-            </a>
+
+
+            <!-- RIGHT -->
+
+            <div class="license-details">
+
+
+                <div class="license-detail">
+
+                    <span>
+                        LICENSE
+                    </span>
+
+                    <strong>
+                        Apache 2.0
+                    </strong>
+
+                </div>
+
+
+                <div class="license-detail">
+
+                    <span>
+                        SOURCE
+                    </span>
+
+                    <strong>
+                        Public
+                    </strong>
+
+                </div>
+
+
+                <div class="license-detail">
+
+                    <span>
+                        DISTRIBUTION
+                    </span>
+
+                    <strong>
+                        License Terms Apply
+                    </strong>
+
+                </div>
+
+
+                <div class="license-detail">
+
+                    <span>
+                        PROJECT
+                    </span>
+
+                    <strong>
+                        DaBoyzApp
+                    </strong>
+
+                </div>
+
+
+                <div class="license-file-preview">
+
+                    <div class="license-file-header">
+
+                        <span>
+                            LICENSE.txt
+                        </span>
+
+                        <span class="license-file-status">
+                            ● INCLUDED
+                        </span>
+
+                    </div>
+
+
+                    <code>
+Apache License
+Version 2.0, January 2004
+
+TERMS AND CONDITIONS FOR USE,
+REPRODUCTION, AND DISTRIBUTION
+                    </code>
+
+                </div>
+
+
+            </div>
+
 
         </div>
+
 
     </section>
 
+
+    <!-- =========================================================
+     CODE OF CONDUCT
+     ========================================================= -->
+
+    <section
+        class="conduct-section"
+        id="code-of-conduct"
+    >
+
+
+        <div class="conduct-card">
+
+
+            <!-- DECORATION -->
+
+            <div class="conduct-card-number">
+                COC
+            </div>
+
+
+            <div class="conduct-corner top-left"></div>
+            <div class="conduct-corner top-right"></div>
+            <div class="conduct-corner bottom-left"></div>
+            <div class="conduct-corner bottom-right"></div>
+
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="conduct-main">
+
+
+                <div class="conduct-status">
+
+                    <span class="status-dot"></span>
+
+                    COMMUNITY STANDARD
+
+                </div>
+
+
+                <p class="conduct-eyebrow">
+                    DABOYZAPP PROJECT
+                </p>
+
+
+                <h2>
+
+                    Code of
+
+                    <span>
+                        Conduct
+                    </span>
+
+                </h2>
+
+
+                <p class="conduct-description">
+
+                    DaBoyzApp is built for the DaBoyz community.
+
+                    Project spaces are expected to remain respectful,
+                    productive, and safe for users, contributors,
+                    developers, and maintainers.
+
+                </p>
+
+
+                <div class="conduct-actions">
+
+
+                    <a
+                        href="/CODE_OF_CONDUCT.md"
+                        target="_blank"
+                        class="conduct-primary-button"
+                    >
+
+                        <span>
+                            VIEW FULL CODE
+                        </span>
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="conduct-details">
+
+
+                <div class="conduct-detail">
+
+                    <span>
+                        EXPECTATION
+                    </span>
+
+                    <strong>
+                        Respect
+                    </strong>
+
+                </div>
+
+
+                <div class="conduct-detail">
+
+                    <span>
+                        CONTRIBUTIONS
+                    </span>
+
+                    <strong>
+                        Good Faith
+                    </strong>
+
+                </div>
+
+
+                <div class="conduct-detail">
+
+                    <span>
+                        SECURITY
+                    </span>
+
+                    <strong>
+                        Responsible Reporting
+                    </strong>
+
+                </div>
+
+
+                <div class="conduct-detail">
+
+                    <span>
+                        ENFORCEMENT
+                    </span>
+
+                    <strong>
+                        Maintainer Led
+                    </strong>
+
+                </div>
+
+
+
+                <!-- MINI FILE PREVIEW -->
+
+                <div class="conduct-file-preview">
+
+
+                    <div class="conduct-file-header">
+
+                        <span>
+                            CODE_OF_CONDUCT.md
+                        </span>
+
+                        <span class="conduct-file-status">
+                            ● ACTIVE
+                        </span>
+
+                    </div>
+
+
+                    <code>
+    # DaBoyzApp Code of Conduct
+
+    ## My Commitment
+
+    Respect users, contributors,
+    and maintainers.
+
+    Constructive feedback.
+    Responsible security reporting.
+    Good-faith contributions.
+                    </code>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <!-- =========================================================
+     CONTRIBUTING
+     ========================================================= -->
+
+    <section
+        class="contributing-section"
+        id="contributing"
+    >
+
+
+        <div class="contributing-card">
+
+
+            <!-- DECORATION -->
+
+            <div class="contributing-card-number">
+                PR
+            </div>
+
+
+            <div class="contributing-corner top-left"></div>
+            <div class="contributing-corner top-right"></div>
+            <div class="contributing-corner bottom-left"></div>
+            <div class="contributing-corner bottom-right"></div>
+
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="contributing-main">
+
+
+                <div class="contributing-status">
+
+                    <span class="status-dot"></span>
+
+                    CONTRIBUTIONS OPEN
+
+                </div>
+
+
+                <p class="contributing-eyebrow">
+                    DABOYZAPP DEVELOPMENT
+                </p>
+
+
+                <h2>
+
+                    Contribute to
+
+                    <span>
+                        DaBoyzApp
+                    </span>
+
+                </h2>
+
+
+                <p class="contributing-description">
+
+                    Help improve DaBoyzApp through bug reports,
+                    feature ideas, documentation, performance,
+                    UI and UX improvements, accessibility,
+                    and code contributions.
+
+                </p>
+
+
+                <div class="contributing-actions">
+
+
+                    <a
+                        href="/CONTRIBUTING.md"
+                        target="_blank"
+                        class="contributing-primary-button"
+                    >
+
+                        <span>
+                            VIEW CONTRIBUTING GUIDE
+                        </span>
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="contributing-details">
+
+
+                <div class="contributing-detail">
+
+                    <span>
+                        BUGS
+                    </span>
+
+                    <strong>
+                        Report Issues
+                    </strong>
+
+                </div>
+
+
+                <div class="contributing-detail">
+
+                    <span>
+                        FEATURES
+                    </span>
+
+                    <strong>
+                        Suggest Ideas
+                    </strong>
+
+                </div>
+
+
+                <div class="contributing-detail">
+
+                    <span>
+                        CODE
+                    </span>
+
+                    <strong>
+                        Submit Changes
+                    </strong>
+
+                </div>
+
+
+                <div class="contributing-detail">
+
+                    <span>
+                        SECURITY
+                    </span>
+
+                    <strong>
+                        Report Privately
+                    </strong>
+
+                </div>
+
+
+
+                <!-- MINI FILE PREVIEW -->
+
+                <div class="contributing-file-preview">
+
+
+                    <div class="contributing-file-header">
+
+                        <span>
+                            CONTRIBUTING.md
+                        </span>
+
+                        <span class="contributing-file-status">
+                            ● OPEN
+                        </span>
+
+                    </div>
+
+
+                    <code>
+    # Contributing to DaBoyzApp
+
+    Ways to contribute:
+
+    - Report bugs
+    - Suggest features
+    - Improve documentation
+    - Improve UI / UX
+    - Improve performance
+    - Submit code changes
+                    </code>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
     <footer>
+
 
         <div class="footer-content">
 
-            <div>
-                <strong>DaBoyzApp</strong>
-                <p>Da Boyz — Community Hub</p>
+
+            <div class="footer-brand">
+
+
+                <div class="footer-brand-name">
+
+                    <span class="brand-red">
+                        DA
+                    </span>
+
+                    <span>
+                        BOYZAPP
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Da Boyz — Community Hub
+                </p>
+
+
             </div>
+
+
 
             <div class="footer-links">
 
-                <a href="https://github.com/KaroDevGroup" target="_blank">
+
+                <a
+                    href="https://github.com/KaroDevGroup"
+                    target="_blank"
+                >
                     GitHub
                 </a>
 
-                <a href="https://discord.gg/tpcbMxMJjv" target="_blank">
+
+                <a
+                    href="https://discord.gg/tpcbMxMJjv"
+                    target="_blank"
+                >
                     Discord
                 </a>
 
+                <a href="/admin/">
+                    Admin Portal
+                </a>
+
+
             </div>
 
+
         </div>
 
+
+
         <div class="footer-bottom">
-            © 2026 Da Boyz. All rights reserved.
+
+
+            <span>
+                © 2026 Da Boyz. All rights reserved.
+            </span>
+
+
+            <span class="footer-status">
+
+                <span class="status-dot"></span>
+
+                DABOYZAPP COMMUNITY HUB
+
+            </span>
+
+
         </div>
+
 
     </footer>
 
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
     <script src="js/script.js"></script>
 
+
 </body>
+
+
 </html>
